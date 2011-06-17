@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>engines.ac</path>
+
+	<!-- EPR -->
+	<animation>
+		<type>rotate</type>
+		<object-name>EPR1</object-name>
+		<property>engines/engine[0]/epr</property>
+		<interpolation>
+			<entry><ind>1</ind><dep>118</dep></entry>	<!-- 0.6 -->
+			<entry><ind>2</ind><dep>-118</dep></entry>	<!-- 2.0 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0686</y-m>
+			<z-m>0.1029</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>EPR2</object-name>
+		<property>engines/engine[1]/epr</property>
+		<interpolation>
+			<entry><ind>1</ind><dep>118</dep></entry>	<!-- 0.6 -->
+			<entry><ind>2</ind><dep>-118</dep></entry>	<!-- 2.0 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.1029</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>EPR3</object-name>
+		<property>engines/engine[2]/epr</property>
+		<interpolation>
+			<entry><ind>1</ind><dep>118</dep></entry>	<!-- 0.6 -->
+			<entry><ind>2</ind><dep>-118</dep></entry>	<!-- 2.0 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0686</y-m>
+			<z-m>0.1029</z-m>
+		</center>
+	</animation>
+
+	<!-- EGT -->
+	<animation>
+		<type>rotate</type>
+		<object-name>EGT1</object-name>
+		<property>engines/engine[0]/egt-degf</property>
+		<interpolation>
+			<entry><ind>32</ind><dep>113</dep></entry>	<!-- 0 -->
+			<entry><ind>1832</ind><dep>-113</dep></entry>	<!-- 10 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0686</y-m>
+			<z-m>0.0343</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>EGT2</object-name>
+		<property>engines/engine[1]/egt-degf</property>
+		<interpolation>
+			<entry><ind>32</ind><dep>113</dep></entry>	<!-- 0 -->
+			<entry><ind>1832</ind><dep>-113</dep></entry>	<!-- 10 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0343</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>EGT3</object-name>
+		<property>engines/engine[2]/egt-degf</property>
+		<interpolation>
+			<entry><ind>32</ind><dep>113</dep></entry>	<!-- 0 -->
+			<entry><ind>1832</ind><dep>-113</dep></entry>	<!-- 10 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0686</y-m>
+			<z-m>0.0343</z-m>
+		</center>
+	</animation>
+
+	<!-- N1 -->
+	<animation>
+		<type>rotate</type>
+		<object-name>N11</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>114</dep></entry>	<!-- 0 -->
+			<entry><ind>120</ind><dep>-114</dep></entry>	<!-- 120 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0686</y-m>
+			<z-m>-0.0343</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>N12</object-name>
+		<property>engines/engine[1]/rpm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>114</dep></entry>	<!-- 0 -->
+			<entry><ind>120</ind><dep>-114</dep></entry>	<!-- 120 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.0343</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>N13</object-name>
+		<property>engines/engine[2]/rpm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>114</dep></entry>	<!-- 0 -->
+			<entry><ind>120</ind><dep>-114</dep></entry>	<!-- 120 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0686</y-m>
+			<z-m>-0.0343</z-m>
+		</center>
+	</animation>
+
+	<!-- FF -->
+	<animation>
+		<type>rotate</type>
+		<object-name>FF1</object-name>
+		<property>engines/engine[0]/fuel-flow_pph</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>106</dep></entry>	<!-- 0 -->
+			<entry><ind>28000</ind><dep>-114</dep></entry>	<!-- 28 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0686</y-m>
+			<z-m>-0.1029</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>FF2</object-name>
+		<property>engines/engine[1]/fuel-flow_pph</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>106</dep></entry>	<!-- 0 -->
+			<entry><ind>28000</ind><dep>-114</dep></entry>	<!-- 28 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.1029</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>FF3</object-name>
+		<property>engines/engine[2]/fuel-flow_pph</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>106</dep></entry>	<!-- 0 -->
+			<entry><ind>28000</ind><dep>-114</dep></entry>	<!-- 28 -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0686</y-m>
+			<z-m>-0.1029</z-m>
+		</center>
+	</animation>
+
+</PropertyList>

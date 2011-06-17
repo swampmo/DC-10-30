@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>landing.ac</path>
+
+	<animation>
+		<name>On/off</name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>gear/gear[0]/position-norm</property>
+					<value>1</value>
+				</equals>
+				<greater-than>
+					<property>systems/electrical/outputs/landing-light-nose[1]</property>
+					<value>5</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Cone on/off</name>
+		<type>select</type>
+		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
+		<condition>
+			<property>controls/lighting/cones</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>flash</type>
+		<object-name>Light</object-name>
+		<power>10</power>
+		<factor>2</factor>
+		<min>1</min>
+		<max>5</max>
+		<two-sides type="bool">false</two-sides>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Steering</name>
+		<type>rotate</type>
+		<property>gear/gear[0]/steering-norm</property>
+		<factor>68</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/light-cone</inherits-from>
+		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
+	</effect>
+
+</PropertyList>

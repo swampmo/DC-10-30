@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Internal sound configuration -->
+
+<PropertyList>
+	<!-- Because of the way this file is "included," the <fx> element is already present and need not be defined -->
+
+</PropertyList>

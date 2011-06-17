@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>strobe.ac</path>
+
+	<animation>
+		<name>On/off</name>
+		<type>select</type>
+		<condition>
+			<greater-than>
+				<property>/systems/electrical/outputs/strobe[1]</property> 
+				<value>5</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Billboard</name>
+		<type>billboard</type>
+	</animation>
+
+</PropertyList>
