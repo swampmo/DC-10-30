@@ -8,17 +8,17 @@
 		<indicated-speed-fpm>instrumentation/vertical-speed-indicator/indicated-speed-fpm</indicated-speed-fpm>
 	</params>
 
-<!--	<animation>
+	<animation>
 		<type>material</type>
 		<object-name>Face</object-name>
 		<object-name>Needle</object-name>
 		<emission>
-			<red>0.028</red>
-			<green>0.014</green>
-			<blue>0.007</blue>
-			<factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
-	</animation>-->
+	</animation>
 
 	<animation>
 		<type>rotate</type>

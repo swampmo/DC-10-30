@@ -8,8 +8,21 @@
 	<sim>
 		<author>Ryan Miller (3d), Ryan Miller (FDM)</author>
 		<status>alpha</status>
+		<version>0.0.3</version>
 
 		<model>
+			<door>
+				<position-x-m type="float">-22.647</position-x-m>
+				<position-y-m type="float">-2.312</position-y-m>
+				<position-z-m type="float">4.746</position-z-m>
+				<jetway-hood-deg type="float">2</jetway-hood-deg>
+			</door>
+			<door>
+				<position-x-m type="float">-13.006</position-x-m>
+				<position-y-m type="float">-2.944</position-y-m>
+				<position-z-m type="float">4.746</position-z-m>
+				<jetway-hood-deg type="float">1</jetway-hood-deg>
+			</door>
 			<livery>
 				<registration type="string" />
 				<has-center-gear type="bool">true</has-center-gear>
@@ -34,6 +47,14 @@
 			<electrical>
 				<path></path>
 			</electrical>
+			<autopilot>
+				<name>Autopilot system</name>
+				<path>Aircraft/DC-10-30/Systems/DC-10-autopilot.xml</path>
+			</autopilot>
+			<autopilot>
+				<name>Autoland</name>
+				<path>Aircraft/DC-10-30/Systems/DC-10-autoland.xml</path>
+			</autopilot>
 			<autopilot>
 				<name>Flight controls</name>
 				<path>Aircraft/DC-10-30/Systems/DC-10-flight-controls.xml</path>
@@ -64,7 +85,7 @@
 				<z-offset-m archive="y">-25.1</z-offset-m>
 			</config>
 		</view>
-		<chase-distance-m type="double">-70</chase-distance-m>
+		<chase-distance-m type="double">-80</chase-distance-m>
 
 		<flaps>
 			<setting>0.00</setting>	<!-- 0 -->
@@ -114,7 +135,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 aircraft.livery.dialog.open();
+								aircraft.livery.dialog.open();
 							</script>
 						</binding>
 					</item>
@@ -130,7 +151,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 DC10.dialogs.lights.open();
+								DC10.dialogs.lights.open();
 							</script>
 						</binding>
 					</item>
@@ -139,7 +160,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 DC10.dialogs.doors.open();
+								DC10.dialogs.doors.open();
 							</script>
 						</binding>
 					</item>
@@ -148,7 +169,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 DC10.dialogs.failures.open();
+								DC10.dialogs.failures.open();
 							</script>
 						</binding>
 					</item>
@@ -157,47 +178,21 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 DC10.dialogs.tiller.open();
+								DC10.dialogs.tiller.open();
 							</script>
 						</binding>
 					</item>
 				</menu>
 			</default>
 		</menubar>
-
-		<multiplay>
-			<generic>
-				<float n="0" alias="/sim/model/door-positions/pax-l1/position-norm" />		<!-- PAX door L1 -->
-				<float n="1" alias="/sim/model/door-positions/pax-l2/position-norm" />		<!-- PAX door L2 -->
-				<float n="2" alias="/sim/model/door-positions/pax-l3/position-norm" />		<!-- PAX door L3 -->
-				<float n="3" alias="/sim/model/door-positions/pax-l4/position-norm" />		<!-- PAX door L4 -->
-				<float n="4" alias="/sim/model/door-positions/pax-r1/position-norm" />		<!-- PAX door R1 -->
-				<float n="5" alias="/sim/model/door-positions/pax-r2/position-norm" />		<!-- PAX door R2 -->
-				<float n="6" alias="/sim/model/door-positions/pax-r3/position-norm" />		<!-- PAX door R3 -->
-				<float n="7" alias="/sim/model/door-positions/pax-r4/position-norm" />		<!-- PAX door R4 -->
-				<float n="8" alias="/sim/model/door-positions/cargo-fwd/position-norm" />	<!-- Forward cargo door -->
-				<float n="9" alias="/sim/model/door-positions/cargo-aft/position-norm" />	<!-- Aft cargo door -->
-				<float n="10" alias="/sim/model/door-positions/cargo-main/position-norm" />	<!-- Main cargo door -->
-				<float n="11" alias="/engines/engine[0]/reverser-pos-norm" />			<!-- Engine 1 reverser -->
-				<float n="12" alias="/engines/engine[1]/reverser-pos-norm" />			<!-- Engine 2 reverser -->
-				<float n="13" alias="/engines/engine[2]/reverser-pos-norm" />			<!-- Engine 3 reverser -->
-				<float n="14" alias="/sim/model/door-positions/boom/position-norm" />		<!-- [KC-10A] Tanker boom -->
-
-				<int n="0" alias="/systems/electrical/outputs/nav-lights" />			<!-- Navigation lights -->
-				<int n="1" alias="/systems/electrical/outputs/beacon[0]" />			<!-- Top anti-collision beacon -->
-				<int n="2" alias="/systems/electrical/outputs/beacon[1]" />			<!-- Bottom anti-collision beacon -->
-				<int n="3" alias="/systems/electrical/outputs/strobe[0]" />			<!-- Front strobe lights -->
-				<int n="4" alias="/systems/electrical/outputs/strobe[1]" />			<!-- Rear trobe lights -->
-				<int n="5" alias="/systems/electrical/outputs/landing-light-port" />		<!-- Port landing light -->
-				<int n="6" alias="/systems/electrical/outputs/landing-light-nose[0]" />		<!-- Nose landing light (fuselage) -->
-				<int n="7" alias="/systems/electrical/outputs/landing-light-nose[1]" />		<!-- Nose landing light (nose gear) -->
-				<int n="8" alias="/systems/electrical/outputs/landing-light-stbd" />		<!-- Starboard landing light -->
-				<int n="9" alias="/systems/electrical/outputs/logo-lights" />			<!-- Logo lights -->
-
-				<string n="0" alias="/sim/model/configuration" />				<!-- [DC-10-30CF] Aircraft configuration -->
-			</generic>
-		</multiplay>
 	</sim>
+
+	<autopilot>
+		<autoflight-serviceable type="bool">true</autoflight-serviceable>
+		<autoflight-serviceable type="bool">true</autoflight-serviceable>
+		<autothrottle-serviceable type="bool">true</autothrottle-serviceable>
+		<autothrottle-serviceable type="bool">true</autothrottle-serviceable>
+	</autopilot>
 
 	<consumables>
 		<fuel>
@@ -223,8 +218,48 @@
 	</consumables>
 
 	<controls>
+		<autoflight>
+			<enable-mode-annunciators type="bool">true</enable-mode-annunciators>
+			<autopilot>
+				<engage-mode type="int">0</engage-mode>
+			</autopilot>
+			<autopilot>
+				<engage-mode type="int">0</engage-mode>
+			</autopilot>
+			<autothrottle-engage type="bool">false</autothrottle-engage>
+			<autothrottle-engage type="bool">false</autothrottle-engage>
+			<control-wheel-steering-override type="bool">false</control-wheel-steering-override>
+			<altitude-select type="double">10000</altitude-select>
+			<nav-backcourse type="bool">false</nav-backcourse>
+			<bank-angle type="float">25</bank-angle> <!-- We would use the bank-angle-select property, but it's clamped between 10 and 30 degrees, while the DC-10 has settings between 5 and 25 degrees -->
+			<heading-select type="double">360</heading-select>
+			<speed-mode type="int">0</speed-mode>
+			<speed-select type="double">200</speed-select>
+			<speed-with-pitch-select type="double">0</speed-with-pitch-select>
+			<mach-with-pitch-select type="double">0</mach-with-pitch-select>
+			<backcourse-button-pushed type="bool">false</backcourse-button-pushed>
+			<turbulence-button-pushed type="bool">false</turbulence-button-pushed>
+			<epr-button-pushed type="bool">false</epr-button-pushed>
+			<speed-knob-pulled type="bool">false</speed-knob-pulled>
+			<speed-knob-pushed type="bool">false</speed-knob-pushed>
+			<heading-knob-pulled type="bool">false</heading-knob-pulled>
+			<heading-knob-pushed type="bool">false</heading-knob-pushed>
+			<ins-button-pushed type="bool">false</ins-button-pushed>
+			<loc-button-pushed type="bool">false</loc-button-pushed>
+			<ils-button-pushed type="bool">false</ils-button-pushed>
+			<altitude-knob-pulled type="bool">false</altitude-knob-pulled>
+			<altitude-knob-pushed type="bool">false</altitude-knob-pushed>
+			<ias-button-pushed type="bool">false</ias-button-pushed>
+			<mach-button-pushed type="bool">false</mach-button-pushed>
+			<land-button-pushed type="bool">false</land-button-pushed>
+			<cws-button-pushed type="bool">false</cws-button-pushed>
+		</autoflight>
+		<engines>
+			<thrust-mode type="int">0</thrust-mode>
+		</engines>
 		<flight>
 			<outboard-ailerons type="bool">true</outboard-ailerons>
+			<slats alias="../flaps" /> <!-- Technically, the flaps lever can separate itself from the slats lever in the retracted position, but this is difficult to simulate on a computer, so we will just keep them coupled -->
 		</flight>
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
@@ -237,10 +272,13 @@
 	</controls>
 
 	<engines>
-		<engine n="0">
+		<engine>
 			<rpm type="double">0</rpm>
 		</engine>
-		<engine n="1">
+		<engine>
+			<rpm type="double">0</rpm>
+		</engine>
+		<engine>
 			<rpm type="double">0</rpm>
 		</engine>
 	</engines>
@@ -249,10 +287,19 @@
 		<altimeter n="1">
 			<serviceable type="bool">true</serviceable>
 		</altimeter>
+		<altimeter n="2">
+			<serviceable type="bool">true</serviceable>
+		</altimeter>
 		<airspeed-indicator n="1">
 			<serviceable type="bool">true</serviceable>
 		</airspeed-indicator>
+		<airspeed-indicator n="2">
+			<serviceable type="bool">true</serviceable>
+		</airspeed-indicator>
 		<attitude-indicator n="1">
+			<serviceable type="bool">true</serviceable>
+		</attitude-indicator>
+		<attitude-indicator n="2">
 			<serviceable type="bool">true</serviceable>
 		</attitude-indicator>
 		<clock>
@@ -268,6 +315,9 @@
 			</frequencies>
 			<serviceable type="bool">true</serviceable>
 		</dme>
+		<heading-indicator>
+			<serviceable type="bool">true</serviceable>
+		</heading-indicator>
 		<nav-compass n="0">
 			<nav-display n="0" type="int">0</nav-display>
 			<nav-display n="1" type="int">0</nav-display>
@@ -276,6 +326,51 @@
 			<nav-display n="0" type="int">0</nav-display>
 			<nav-display n="1" type="int">0</nav-display>
 		</nav-compass>
+		<radar-altimeter>
+			<decision-height-ft type="double">700</decision-height-ft>
+			<serviceable type="bool">true</serviceable>
+		</radar-altimeter>
+		<radar-altimeter>
+			<decision-height-ft type="double">700</decision-height-ft>
+			<serviceable type="bool">true</serviceable>
+		</radar-altimeter>
+		<slip-skid-ball n="1">
+			<serviceable type="bool">true</serviceable>
+		</slip-skid-ball>
+		<vertical-speed-indicator n="1">
+			<serviceable type="bool">true</serviceable>
+		</vertical-speed-indicator>
+		<!-- See http://wiki.flightgear.org/GPWS -->
+		<mk-viii>
+			<serviceable type="bool">true</serviceable>
+			<configuration-module>
+				<category-1 type="int">254</category-1>
+				<category-3 type="int">2</category-3>
+				<category-4 type="int">13</category-4>
+				<category-5 type="int">0</category-5>
+				<category-6 type="int">0</category-6>
+				<category-7 type="int">124</category-7>
+				<category-8 type="int">4</category-8>
+				<category-9 type="int">3</category-9>
+				<category-10 type="int">2</category-10>
+				<category-13 type="int">7</category-13>
+				<category-14 type="int">0</category-14>
+			</configuration-module>
+			<inputs>
+				<arinc429>
+					<decision-height-ncd type="bool">false</decision-height-ncd>
+					<decision-height type="double">200</decision-height>
+				</arinc429>
+			</inputs>
+			<speaker>
+				<max-dist>2</max-dist>
+				<reference-dist>1</reference-dist>
+				<volume>0.4</volume>
+			</speaker>
+			<voice>
+				<file-prefix type="string">Sounds/mk-viii/</file-prefix>
+			</voice>
+		</mk-viii>
 	</instrumentation>
 
 	<input>
@@ -299,7 +394,7 @@
 				<desc>Steer tiller full left</desc>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/gear/tiller-steering-deg</property>
+					<property>controls/gear/tiller-steer-deg</property>
 					<value>-68</value>
 				</binding>
 			</key>
@@ -309,7 +404,7 @@
 				<repeatable type="bool">true</repeatable>
 				<binding>
 					<command>property-adjust</command>
-					<property>controls/gear/tiller-steering-deg</property>
+					<property>controls/gear/tiller-steer-deg</property>
 					<step>-8.5</step>
 					<min>-68</min>
 				</binding>
@@ -319,7 +414,7 @@
 				<desc>Center tiller</desc>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/gear/tiller-steering-deg</property>
+					<property>controls/gear/tiller-steer-deg</property>
 					<value>0</value>
 				</binding>
 			</key>
@@ -339,7 +434,7 @@
 				<repeatable type="bool">true</repeatable>
 				<binding>
 					<command>property-adjust</command>
-					<property>controls/gear/tiller-steering-deg</property>
+					<property>controls/gear/tiller-steer-deg</property>
 					<step>8.5</step>
 					<max>68</max>
 				</binding>
@@ -349,7 +444,7 @@
 				<desc>Steer tiller full right</desc>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/gear/tiller-steering-deg</property>
+					<property>controls/gear/tiller-steer-deg</property>
 					<value>68</value>
 				</binding>
 			</key>
@@ -360,9 +455,20 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.engine1.reverse_thrust();
-					 DC10.engine2.reverse_thrust();
-					 DC10.engine3.reverse_thrust();
+						DC10.engine1.reverse_thrust();
+						DC10.engine2.reverse_thrust();
+						DC10.engine3.reverse_thrust();
+					</script>
+				</binding>
+			</key>
+			<!-- GUI -->
+			<key n="268">
+				<name>F12</name>
+				<desc>Pop up radio settings dialog</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						DC10.dialogs.radio.open();
 					</script>
 				</binding>
 			</key>
@@ -375,6 +481,7 @@
 			<file>Aircraft/DC-10-30/Nasal/engines.nas</file>
 			<file>Aircraft/DC-10-30/Nasal/effects.nas</file>
 			<file>Aircraft/DC-10-30/Nasal/doors.nas</file>
+			<file>Aircraft/DC-10-30/Nasal/multiplayer.nas</file>
 			<file>Aircraft/DC-10-30/Nasal/systems.nas</file>
 		</DC10>
 	</nasal>

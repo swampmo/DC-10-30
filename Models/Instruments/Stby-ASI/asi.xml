@@ -9,6 +9,18 @@
 	</params>
 
 	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Needle</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
 		<type>rotate</type>
 		<object-name>Needle</object-name>
 		<property alias="../../params/indicated-speed-kt" />

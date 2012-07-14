@@ -5,6 +5,26 @@
 	<path>dme.ac</path>
 
 	<animation>
+		<type>material</type>
+		<object-name>Screens</object-name>
+		<object-name>DecimalPoints</object-name>
+		<object-name>Dist1-.1</object-name>
+		<object-name>Dist1-1</object-name>
+		<object-name>Dist1-10</object-name>
+		<object-name>Dist1-100</object-name>
+		<object-name>Dist2-.1</object-name>
+		<object-name>Dist2-1</object-name>
+		<object-name>Dist2-10</object-name>
+		<object-name>Dist2-100</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
 		<name>NAV 1 on/off</name>
 		<type>select</type>
 		<object-name>Off-1</object-name>

@@ -5,6 +5,24 @@
 	<path>tas-sat.ac</path>
 
 	<animation>
+		<type>material</type>
+		<object-name>SAT-</object-name>
+		<object-name>SAT-1</object-name>
+		<object-name>SAT-10</object-name>
+		<object-name>SAT1</object-name>
+		<object-name>SAT10</object-name>
+		<object-name>TAS1</object-name>
+		<object-name>TAS10</object-name>
+		<object-name>TAS100</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
 		<type>textranslate</type>
 		<object-name>TAS100</object-name>
 		<property>instrumentation/airspeed-indicator[0]/true-speed-kt</property>

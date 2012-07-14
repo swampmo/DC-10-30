@@ -6,6 +6,24 @@
 <PropertyList>
 
 	<path>DC-10-30-fuselage.ac</path>
+	
+	<!-- Lighting -->
+	<animation>
+		<name>Cabin lights</name>
+		<type>material</type>
+		<object-name>Windows</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/cabin-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+		<emission>
+			<red>0.5</red>
+			<green>0.4941</green>
+			<blue>0.3275</blue>
+		</emission>
+	</animation>
 
 	<!-- Cargo doors -->
 	<animation>
@@ -19,7 +37,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("cargo-fwd");
+					DC10.doors.toggle("cargo-fwd");
 				</script>
 			</binding>
 		</action>
@@ -54,7 +72,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("cargo-aft");
+					DC10.doors.toggle("cargo-aft");
 				</script>
 			</binding>
 		</action>

@@ -13,7 +13,7 @@
 
 	<!-- ANIMATIONS -->
 	<!-- Lighting -->
-<!--	<animation>
+	<animation>
 		<name>Standby VOR display illumination</name>
 		<type>material</type>
 		<object-name>Face</object-name>
@@ -28,7 +28,7 @@
 			<blue>0.21</blue>
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
-	</animation>-->
+	</animation>
 
 	<!-- Face and needles -->
 	<animation>

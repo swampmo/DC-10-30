@@ -141,7 +141,45 @@
 			</binding>
 			<live>true</live>
 		</checkbox>
+	</group>
 
+	<hrule />
+	
+	<group>
+		<layout>vbox</layout>
+			
+		<checkbox>
+			<halign>left</halign>
+			<label>Panel lights (Rembrandt required)</label>
+			<property>controls/lighting/panel-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+			
+		<checkbox>
+			<halign>left</halign>
+			<label>Cabin lights</label>
+			<property>controls/lighting/cabin-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<text>
+			<label>Instrument lighting</label>
+		</text>
+
+		<slider>
+			<pref-width>200</pref-width>
+			<property>controls/lighting/instruments-norm</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</slider>
+		
 <!--		<text>
 			<halign>left</halign>
 			<label>Cockpit dome lighting</label>
@@ -209,16 +247,6 @@
 				<command>dialog-apply</command>
 			</binding>
 		</slider>-->
-
-		<checkbox>
-			<halign>left</halign>
-			<label>Enable landing light cones</label>
-			<property>controls/lighting/cones</property>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-			<live>true</live>
-		</checkbox>
 	</group>
 
 	<hrule />

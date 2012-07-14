@@ -73,7 +73,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-l1");
+						DC10.doors.pax_l1.open();
 					</script>
 				</binding>
 			</button>
@@ -89,7 +89,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-l1");
+						DC10.doors.pax_l1.close();
 					</script>
 				</binding>
 			</button>
@@ -111,7 +111,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-l2");
+						DC10.doors.pax_l2.open();
 					</script>
 				</binding>
 			</button>
@@ -127,7 +127,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-l2");
+						DC10.doors.pax_l2.close();
 					</script>
 				</binding>
 			</button>
@@ -149,7 +149,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-l3");
+						DC10.doors.pax_l3.open();
 					</script>
 				</binding>
 			</button>
@@ -165,7 +165,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-l3");
+						DC10.doors.pax_l3.close();
 					</script>
 				</binding>
 			</button>
@@ -187,7 +187,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-l4");
+						DC10.doors.pax_l4.open();
 					</script>
 				</binding>
 			</button>
@@ -203,7 +203,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-l4");
+						DC10.doors.pax_l4.close();
 					</script>
 				</binding>
 			</button>
@@ -231,7 +231,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-r1");
+						DC10.doors.pax_r1.open();
 					</script>
 				</binding>
 			</button>
@@ -247,7 +247,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-r1");
+						DC10.doors.pax_r1.close();
 					</script>
 				</binding>
 			</button>
@@ -269,7 +269,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-r2");
+						DC10.doors.pax_r2.open();
 					</script>
 				</binding>
 			</button>
@@ -285,7 +285,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-r2");
+						DC10.doors.pax_r2.close();
 					</script>
 				</binding>
 			</button>
@@ -307,7 +307,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-r3");
+						DC10.doors.pax_r3.open();
 					</script>
 				</binding>
 			</button>
@@ -323,7 +323,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-r3");
+						DC10.doors.pax_r3.close();
 					</script>
 				</binding>
 			</button>
@@ -345,7 +345,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.open("pax-r4");
+						DC10.doors.pax_r4.open();
 					</script>
 				</binding>
 			</button>
@@ -361,7 +361,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 DC10.doors.close("pax-r4");
+						DC10.doors.pax_r4.close();
 					</script>
 				</binding>
 			</button>
@@ -422,7 +422,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.open("cargo-fwd");
+					DC10.doors.cargo_fwd.open();
 				</script>
 			</binding>
 		</button>
@@ -454,7 +454,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.close("cargo-fwd");
+					DC10.doors.cargo_fwd.close();
 				</script>
 			</binding>
 		</button>
@@ -508,7 +508,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.open("cargo-aft");
+					DC10.doors.cargo_aft.open();
 				</script>
 			</binding>
 		</button>
@@ -540,7 +540,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.close("cargo-aft");
+					DC10.doors.cargo_aft.close();
 				</script>
 			</binding>
 		</button>
@@ -574,7 +574,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.open("cargo-main");
+					DC10.doors.cargo_main.open();
 				</script>
 			</binding>
 		</button>
@@ -596,7 +596,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.close("cargo-main");
+					DC10.doors.cargo_main.close();
 				</script>
 			</binding>
 		</button>

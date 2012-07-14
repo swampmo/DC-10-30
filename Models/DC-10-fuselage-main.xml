@@ -17,7 +17,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-l1");
+					DC10.doors.pax_l1.toggle();
 				</script>
 			</binding>
 		</action>
@@ -73,7 +73,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-l2");
+					DC10.doors.pax_l2.toggle();
 				</script>
 			</binding>
 		</action>
@@ -129,7 +129,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-l3");
+					DC10.doors.pax_l3.toggle();
 				</script>
 			</binding>
 		</action>
@@ -184,7 +184,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-l4");
+					DC10.doors.pax_l4.toggle();
 				</script>
 			</binding>
 		</action>
@@ -240,7 +240,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-r1");
+					DC10.doors.pax_r1.toggle();
 				</script>
 			</binding>
 		</action>
@@ -296,7 +296,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-r2");
+					DC10.doors.pax_r2.toggle();
 				</script>
 			</binding>
 		</action>
@@ -352,7 +352,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-r3");
+					DC10.doors.pax_r3.toggle();
 				</script>
 			</binding>
 		</action>
@@ -407,7 +407,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 DC10.doors.toggle("pax-r4");
+					DC10.doors.pax_r4.toggle();
 				</script>
 			</binding>
 		</action>
@@ -760,6 +760,12 @@
 		<name>Fuselage reflect</name>
 		<inherits-from>Aircraft/DC-10-30/Models/Effects/DC10reflect</inherits-from>
 		<object-name>Fuselage</object-name>
+	</effect>
+	<!-- Rembrandt !! -->
+	<effect>
+		<name>REMBRANDT transparency</name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>CockpitWindows</object-name>
 	</effect>
 
 </PropertyList>

@@ -2,38 +2,25 @@
 # Nasal door system
 #########################
 
+var Door =
+{
+	new: func(name, transit_time)
+	{
+		return aircraft.door.new("sim/model/door-positions/" ~ name, transit_time);
+	}
+};
 var doors =
- {
- new: func(name, transit_time)
-  {
-  doors[name] = aircraft.door.new("sim/model/door-positions/" ~ name, transit_time);
-  },
- toggle: func(name)
-  {
-  doors[name].toggle();
-  },
- open: func(name)
-  {
-  doors[name].open();
-  },
- close: func(name)
-  {
-  doors[name].close();
-  },
- setpos: func(name, value)
-  {
-  doors[name].setpos(value);
-  }
- };
-doors.new("pax-l1", 3);
-doors.new("pax-l2", 3);
-doors.new("pax-l4", 3);
-doors.new("pax-l3", 3);
-doors.new("pax-r1", 3);
-doors.new("pax-r2", 3);
-doors.new("pax-r4", 3);
-doors.new("pax-r3", 3);
-doors.new("cargo-fwd", 3);
-doors.new("cargo-aft", 3);
-doors.new("cargo-main", 3);
-doors.new("boom", 5);
+{
+	pax_l1: Door.new("pax-l1", 3),
+	pax_l2: Door.new("pax-l2", 3),
+	pax_l3: Door.new("pax-l3", 3),
+	pax_l4: Door.new("pax-l4", 3),
+	pax_r1: Door.new("pax-r1", 3),
+	pax_r2: Door.new("pax-r2", 3),
+	pax_r3: Door.new("pax-r3", 3),
+	pax_r4: Door.new("pax-r4", 3),
+	cargo_fwd: Door.new("cargo-fwd", 3),
+	cargo_aft: Door.new("cargo-aft", 3),
+	cargo_main: Door.new("cargo-main", 3),
+	boom: Door.new("boom", 5)
+};

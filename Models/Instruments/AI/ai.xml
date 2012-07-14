@@ -23,16 +23,17 @@
 		<object-name>Sky</object-name>
 		<object-name>SlipBall</object-name>
 		<object-name>SlipTrack</object-name>
-		<condition>
+		<!--condition>
 			<greater-than>
 				<property>systems/electrical/outputs/instrument-lights</property>
 				<value>15</value>
 			</greater-than>
-		</condition>
+		</condition-->
 		<emission>
 			<red>0.5</red>
 			<green>0.5</green>
 			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>
 

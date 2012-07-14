@@ -24,17 +24,17 @@
 				<indicated-timezone>instrumentation/clock[0]/indicated-timezone</indicated-timezone>
 				<local-hour>instrumentation/clock[0]/local-hour</local-hour>
 				<start-stop-action-script>
-				 if (DC10.chronometer1.running)
-				  {
-				  DC10.chronometer1.stop();
-				  }
-				 else
-				  {
-				  DC10.chronometer1.start();
-				  }
+					if (DC10.chronometer1.running)
+					{
+						DC10.chronometer1.stop();
+					}
+					else
+					{
+						DC10.chronometer1.start();
+					}
 				</start-stop-action-script>
 				<reset-action-script>
-				 DC10.chronometer1.reset();
+					DC10.chronometer1.reset();
 				</reset-action-script>
 			</params>
 		</overlay>
@@ -90,7 +90,7 @@
 			<params>
 				<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
 				<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
-				<indicated-slip-skid>instrumentation/slip-skid-ball/indicated-slip-skid</indicated-slip-skid>
+				<indicated-slip-skid>instrumentation/slip-skid-ball[0]/indicated-slip-skid</indicated-slip-skid>
 			</params>
 		</overlay>
 		<offsets>
@@ -109,8 +109,8 @@
 					<indicated-ground-speed-kt>instrumentation/dme[0]/indicated-ground-speed-kt</indicated-ground-speed-kt>
 				</dme>
 				<heading-indicator>
-					<indicated-heading-deg>instrumentation/heading-indicator/indicated-heading-deg</indicated-heading-deg>
-					<offset-deg>instrumentation/heading-indicator/offset-deg</offset-deg>
+					<indicated-heading-deg>instrumentation/heading-indicator[0]/indicated-heading-deg</indicated-heading-deg>
+					<offset-deg>instrumentation/heading-indicator[0]/offset-deg</offset-deg>
 				</heading-indicator>
 				<nav>
 					<from-flag>instrumentation/nav[0]/to-flag</from-flag>
@@ -132,10 +132,24 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/DC-10-30/Models/Instruments/Radio-Alt/radio-alt.xml</path>
+		<overlay>
+			<params>
+				<radar-altitude-ft>instrumentation/radar-altimeter[0]/radar-altitude-ft</radar-altitude-ft>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-3.064</x-m>
+			<y-m>-0.438</y-m>
+			<z-m>0.961</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/DC-10-30/Models/Instruments/VSI/vsi.xml</path>
 		<overlay>
 			<params>
-				<indicated-speed-fpm>instrumentation/vertical-speed-indicator/indicated-speed-fpm</indicated-speed-fpm>
+				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[0]/indicated-speed-fpm</indicated-speed-fpm>
 			</params>
 		</overlay>
 		<offsets>
@@ -171,6 +185,15 @@
 	</model>
 
 	<!-- Shared instruments -->
+	<model>
+		<path>Aircraft/DC-10-30/Models/Instruments/MCP/mcp.xml</path>
+		<offsets>
+			<x-m>-3.035</x-m>
+			<y-m>0</y-m>
+			<z-m>1.124</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
 	<model>
 		<path>Aircraft/DC-10-30/Models/Instruments/Stby-AI/ai.xml</path>
 		<overlay>
@@ -270,7 +293,7 @@
 		<path>Aircraft/DC-10-30/Models/Instruments/ASI/asi.xml</path>
 		<overlay>
 			<params>
-				<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
+				<indicated-speed-kt>instrumentation/airspeed-indicator[2]/indicated-speed-kt</indicated-speed-kt>
 			</params>
 		</overlay>
 		<offsets>
@@ -309,9 +332,9 @@
 		<path>Aircraft/DC-10-30/Models/Instruments/AI/ai.xml</path>
 		<overlay>
 			<params>
-				<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
-				<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
-				<indicated-slip-skid>instrumentation/slip-skid-ball/indicated-slip-skid</indicated-slip-skid>
+				<indicated-pitch-deg>instrumentation/attitude-indicator[2]/indicated-pitch-deg</indicated-pitch-deg>
+				<indicated-roll-deg>instrumentation/attitude-indicator[2]/indicated-roll-deg</indicated-roll-deg>
+				<indicated-slip-skid>instrumentation/slip-skid-ball[1]/indicated-slip-skid</indicated-slip-skid>
 			</params>
 		</overlay>
 		<offsets>
@@ -353,10 +376,24 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/DC-10-30/Models/Instruments/Radio-Alt/radio-alt.xml</path>
+		<overlay>
+			<params>
+				<radar-altitude-ft>instrumentation/radar-altimeter[1]/radar-altitude-ft</radar-altitude-ft>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-3.064</x-m>
+			<y-m>0.547</y-m>
+			<z-m>0.961</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+	</model>
+	<model>
 		<path>Aircraft/DC-10-30/Models/Instruments/VSI/vsi.xml</path>
 		<overlay>
 			<params>
-				<indicated-speed-fpm>instrumentation/vertical-speed-indicator/indicated-speed-fpm</indicated-speed-fpm>
+				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[1]/indicated-speed-fpm</indicated-speed-fpm>
 			</params>
 		</overlay>
 		<offsets>
@@ -370,8 +407,8 @@
 		<path>Aircraft/DC-10-30/Models/Instruments/Alt/alt.xml</path>
 		<overlay>
 			<params>
-				<indicated-altitude-ft>instrumentation/altimeter[0]/indicated-altitude-ft</indicated-altitude-ft>
-				<setting-inhg>instrumentation/altimeter[0]/setting-inhg</setting-inhg>
+				<indicated-altitude-ft>instrumentation/altimeter[2]/indicated-altitude-ft</indicated-altitude-ft>
+				<setting-inhg>instrumentation/altimeter[2]/setting-inhg</setting-inhg>
 			</params>
 		</overlay>
 		<offsets>
@@ -381,14 +418,640 @@
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
 	</model>
+
+	<!-- Panel lights -->
 	<model>
-		<path>Aircraft/DC-10-30/Models/Instruments/Fuel/fuel.xml</path>
+		<name>Left panel light</name>
+		<path>Aircraft/DC-10-30/Models/Lights/panel.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/panel-lights</source>
+			</params>
+		</overlay>
 		<offsets>
-			<x-m>-3.048</x-m>
-			<y-m>0.664</y-m>
-			<z-m>0.875</z-m>
-			<pitch-deg>-10</pitch-deg>
+			<x-m>-3.036</x-m>
+			<y-m>-0.522</y-m>
+			<z-m>1.25</z-m>
+			<pitch-deg>-103.612</pitch-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>Center panel light</name>
+		<path>Aircraft/DC-10-30/Models/Lights/panel.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/panel-lights</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-3.036</x-m>
+			<y-m>0</y-m>
+			<z-m>1.25</z-m>
+			<pitch-deg>-103.612</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Right panel light</name>
+		<path>Aircraft/DC-10-30/Models/Lights/panel.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/panel-lights</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-3.036</x-m>
+			<y-m>0.522</y-m>
+			<z-m>1.25</z-m>
+			<pitch-deg>-103.612</pitch-deg>
+		</offsets>
+	</model>
+	
+	<!-- Parking brake -->
+	<animation>
+		<type>pick</type>
+		<object-name>ParkingBrake</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/brake-parking</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>ParkingBrake</object-name>
+		<property>controls/gear/brake-parking</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-18</dep></entry>
+			<entry><ind>1</ind><dep>29</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+
+	<!-- Elevator trim -->
+	<animation>
+		<type>pick</type>
+		<object-name>ElevatorTrim</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<step>0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<step>-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevatorTrim</object-name>
+		<property>controls/flight/elevator-trim</property>
+		<interpolation>
+			<entry><ind>-1</ind><dep>56</dep></entry>
+			<entry><ind>0</ind><dep>12.5</dep></entry>
+			<entry><ind>1</ind><dep>3</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+
+	<!-- Speedbrake/spoiler lever -->
+	<animation>
+		<type>pick</type>
+		<object-name>SpeedbrakeLever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/spoilers</property>
+				<step>0.2</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/spoilers</property>
+				<step>-0.2</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>SpeedbrakeLever</object-name>
+		<property>controls/flight/spoilers</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-33</dep></entry>
+			<entry><ind>0.2</ind><dep>2</dep></entry>
+			<entry><ind>0.4</ind><dep>10</dep></entry>
+			<entry><ind>0.6</ind><dep>18</dep></entry>
+			<entry><ind>0.8</ind><dep>30</dep></entry>
+			<entry><ind>1</ind><dep>40</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+
+	<!-- Engine 1 thrust lever -->
+	<animation>
+		<type>pick</type>
+		<object-name>Eng1ThrustATOff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/autothrottle-engage[0]</property>
+				<value type="bool">false</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng1ThrustLever</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step>0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step>-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng1ThrustLever</object-name>
+		<object-name>Eng1ThrustATOff</object-name>
+		<object-name>Eng1Reverser</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>8</dep></entry>
+			<entry><ind>0.6</ind><dep>-34</dep></entry>
+			<entry><ind>1</ind><dep>-43</dep></entry>
+		</interpolation>
+		<condition>
+			<not>
+				<property>controls/engines/engine[0]/reverser</property>
+			</not>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng1Reverser</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 DC10.engine1.reverse_thrust();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng1Reverser</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<factor>140</factor>
+		<condition>
+			<property>controls/engines/engine[0]/reverser</property>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.531</x-m>
+			<y-m>0</y-m>
+			<z-m>0.87</z-m>
+		</center>
+	</animation>
+	<!-- Engine 2 thrust lever -->
+	<animation>
+		<type>pick</type>
+		<object-name>Eng2ThrustLever</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/throttle</property>
+				<step>0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/throttle</property>
+				<step>-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng2ThrustLever</object-name>
+		<object-name>Eng2ThrustTOGA</object-name>
+		<object-name>Eng2Reverser</object-name>
+		<property>controls/engines/engine[1]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>8</dep></entry>
+			<entry><ind>0.6</ind><dep>-34</dep></entry>
+			<entry><ind>1</ind><dep>-43</dep></entry>
+		</interpolation>
+		<condition>
+			<not>
+				<property>controls/engines/engine[1]/reverser</property>
+			</not>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng2Reverser</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 DC10.engine2.reverse_thrust();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng2Reverser</object-name>
+		<property>controls/engines/engine[1]/throttle</property>
+		<factor>140</factor>
+		<condition>
+			<property>controls/engines/engine[1]/reverser</property>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.531</x-m>
+			<y-m>0</y-m>
+			<z-m>0.87</z-m>
+		</center>
+	</animation>
+	<!-- Engine 3 thrust lever -->
+	<animation>
+		<type>pick</type>
+		<object-name>Eng3ThrustATOff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/autothrottle-engage[1]</property>
+				<value type="bool">false</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng3ThrustLever</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[2]/throttle</property>
+				<step>0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[2]/throttle</property>
+				<step>-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng3ThrustLever</object-name>
+		<object-name>Eng3ThrustATOff</object-name>
+		<object-name>Eng3Reverser</object-name>
+		<property>controls/engines/engine[2]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>8</dep></entry>
+			<entry><ind>0.6</ind><dep>-34</dep></entry>
+			<entry><ind>1</ind><dep>-43</dep></entry>
+		</interpolation>
+		<condition>
+			<not>
+				<property>controls/engines/engine[2]/reverser</property>
+			</not>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng3Reverser</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 DC10.engine3.reverse_thrust();
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng3Reverser</object-name>
+		<property>controls/engines/engine[2]/throttle</property>
+		<factor>140</factor>
+		<condition>
+			<property>controls/engines/engine[2]/reverser</property>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.531</x-m>
+			<y-m>0</y-m>
+			<z-m>0.87</z-m>
+		</center>
+	</animation>
+
+	<!-- Engine fuel flow switches -->
+	<animation>
+		<type>pick</type>
+		<object-name>Eng1Cutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng1Cutoff</object-name>
+		<property>controls/engines/engine[0]/cutoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-34</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng2Cutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[1]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng2Cutoff</object-name>
+		<property>controls/engines/engine[1]/cutoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-34</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Eng3Cutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[2]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Eng3Cutoff</object-name>
+		<property>controls/engines/engine[2]/cutoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-34</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+
+	<!-- Flaps/slats levers -->
+	<animation>
+		<type>pick</type>
+		<object-name>FlapLever</object-name>
+		<object-name>SlatLever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 controls.flapsDown(1);
+				</script>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 controls.flapsDown(-1);
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>FlapLever</object-name>
+		<property>controls/flight/flaps</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-29</dep></entry>
+			<entry><ind>0.3</ind><dep>6</dep></entry>
+			<entry><ind>0.44</ind><dep>12</dep></entry>
+			<entry><ind>0.7</ind><dep>22</dep></entry>
+			<entry><ind>1</ind><dep>37</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>SlatLever</object-name>
+		<property>controls/flight/slats</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-28</dep></entry>
+			<entry><ind>0.3</ind><dep>5</dep></entry>
+			<entry><ind>0.44</ind><dep>11</dep></entry>
+			<entry><ind>0.7</ind><dep>21</dep></entry>
+			<entry><ind>1</ind><dep>36</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.548</x-m>
+			<y-m>0</y-m>
+			<z-m>0.522</z-m>
+		</center>
+	</animation>
+	
+	<!-- Rembrandt !! -->
+	<effect>
+		<name>REMBRANDT transparency</name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>TQMarkings</object-name>
+	</effect>
 
 </PropertyList>

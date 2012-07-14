@@ -9,7 +9,7 @@
 		<!-- Engine 1 sound -->
 		<engine>
 			<name>Engine 1 sound 1 external</name>
-			<path>Sounds/turbojet_fan.wav</path>
+			<path>Aircraft/DC-10-30/Sounds/whine.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -24,17 +24,13 @@
 			</condition>
 			<volume>
 				<property>engines/engine[0]/rpm</property>
-				<offset>50</offset>
-				<factor>0.02</factor>
-				<min>0</min>
-				<max>100</max>
+				<offset>0</offset>
+				<factor>0.0075</factor>
 			</volume>
 			<pitch>
 				<property>engines/engine[0]/rpm</property>
 				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
+				<factor>0.02</factor>
 			</pitch>
 			<orientation>
 				<x>-1</x>
@@ -47,7 +43,7 @@
 		</engine>
 		<engine>
 			<name>Engine 1 sound 2 external</name>
-			<path>Sounds/turbine_loop.wav</path>
+			<path>Aircraft/DC-10-30/Sounds/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -63,54 +59,12 @@
 			<volume>
 				<property>engines/engine[0]/rpm</property>
 				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
+				<factor>0.05</factor>
 			</volume>
 			<pitch>
 				<property>engines/engine[0]/rpm</property>
 				<offset>0</offset>
 				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
-			</pitch>
-			<orientation>
-				<x>-1</x>
-				<y>0</y>
-				<z>0</z>
-				<inner-angle>75</inner-angle>
-				<outer-angle>210</outer-angle>
-				<outer-gain>0.1</outer-gain>
-			</orientation>
-		</engine>
-		<engine>
-			<name>Engine 1 sound 3 external</name>
-			<path>Sounds/jet.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
-					<greater-than>
-						<property>engines/engine[0]/rpm</property>
-						<value>0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>engines/engine[0]/rpm</property>
-				<offset>50</offset>
-				<factor>0.005</factor>
-				<min>0</min>
-				<max>100</max>
-			</volume>
-			<pitch>
-				<property>engines/engine[0]/rpm</property>
-				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
 			</pitch>
 			<orientation>
 				<x>1</x>
@@ -122,14 +76,11 @@
 			</orientation>
 		</engine>
 		<engine>
-			<name>Engine 1 reverse thrust external</name>
+			<name>Engine 1 reverse thrust</name>
 			<path>Sounds/exhaust_loop.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
 					<greater-than>
 						<property>engines/engine[0]/rpm</property>
 						<value>0</value>
@@ -140,18 +91,16 @@
 					</greater-than>
 				</and>
 			</condition>
-			<volume>
-				<property>engines/engine[0]/reverser-pos-norm</property>
+			<pitch>
+				<property>engines/engine[0]/rpm</property>
 				<offset>0</offset>
-				<factor>200</factor>
-				<min>0</min>
-				<max>200</max>
-			</volume>
+				<factor>0.01</factor>
+			</pitch>
 		</engine>
 		<!-- Engine 2 sound -->
 		<engine>
 			<name>Engine 2 sound 1 external</name>
-			<path>Sounds/turbojet_fan.wav</path>
+			<path>Aircraft/DC-10-30/Sounds/whine.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -166,17 +115,13 @@
 			</condition>
 			<volume>
 				<property>engines/engine[1]/rpm</property>
-				<offset>50</offset>
-				<factor>0.02</factor>
-				<min>0</min>
-				<max>100</max>
+				<offset>0</offset>
+				<factor>0.0075</factor>
 			</volume>
 			<pitch>
 				<property>engines/engine[1]/rpm</property>
 				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
+				<factor>0.02</factor>
 			</pitch>
 			<orientation>
 				<x>-1</x>
@@ -189,7 +134,7 @@
 		</engine>
 		<engine>
 			<name>Engine 2 sound 2 external</name>
-			<path>Sounds/turbine_loop.wav</path>
+			<path>Aircraft/DC-10-30/Sounds/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -205,16 +150,69 @@
 			<volume>
 				<property>engines/engine[1]/rpm</property>
 				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
+				<factor>0.05</factor>
 			</volume>
 			<pitch>
 				<property>engines/engine[1]/rpm</property>
 				<offset>0</offset>
 				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
+			</pitch>
+			<orientation>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+				<inner-angle>75</inner-angle>
+				<outer-angle>210</outer-angle>
+				<outer-gain>0.1</outer-gain>
+			</orientation>
+		</engine>
+		<engine>
+			<name>Engine 2 reverse thrust</name>
+			<path>Sounds/exhaust_loop.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[1]/rpm</property>
+						<value>0</value>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[1]/reverser-pos-norm</property>
+						<value>0</value>
+					</greater-than>
+				</and>
+			</condition>
+			<pitch>
+				<property>engines/engine[1]/rpm</property>
+				<offset>0</offset>
+				<factor>0.01</factor>
+			</pitch>
+		</engine>
+		<!-- Engine 3 sound -->
+		<engine>
+			<name>Engine 3 sound 1 external</name>
+			<path>Aircraft/DC-10-30/Sounds/whine.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<and>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+					<greater-than>
+						<property>engines/engine[2]/rpm</property>
+						<value>0</value>
+					</greater-than>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[2]/rpm</property>
+				<offset>0</offset>
+				<factor>0.0075</factor>
+			</volume>
+			<pitch>
+				<property>engines/engine[2]/rpm</property>
+				<offset>0</offset>
+				<factor>0.02</factor>
 			</pitch>
 			<orientation>
 				<x>-1</x>
@@ -227,7 +225,7 @@
 		</engine>
 		<engine>
 			<name>Engine 2 sound 3 external</name>
-			<path>Sounds/jet.wav</path>
+			<path>Aircraft/DC-10-30/Sounds/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -235,24 +233,20 @@
 						<property>sim/current-view/internal</property>
 					</not>
 					<greater-than>
-						<property>engines/engine[1]/rpm</property>
+						<property>engines/engine[2]/rpm</property>
 						<value>0</value>
 					</greater-than>
 				</and>
 			</condition>
 			<volume>
-				<property>engines/engine[1]/rpm</property>
-				<offset>50</offset>
-				<factor>0.005</factor>
-				<min>0</min>
-				<max>100</max>
+				<property>engines/engine[2]/rpm</property>
+				<offset>0</offset>
+				<factor>0.05</factor>
 			</volume>
 			<pitch>
-				<property>engines/engine[1]/rpm</property>
+				<property>engines/engine[2]/rpm</property>
 				<offset>0</offset>
 				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
 			</pitch>
 			<orientation>
 				<x>1</x>
@@ -264,156 +258,11 @@
 			</orientation>
 		</engine>
 		<engine>
-			<name>Engine 2 reverse thrust external</name>
+			<name>Engine 3 reverse thrust</name>
 			<path>Sounds/exhaust_loop.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
-					<greater-than>
-						<property>engines/engine[1]/rpm</property>
-						<value>0</value>
-					</greater-than>
-					<greater-than>
-						<property>engines/engine[1]/reverser-pos-norm</property>
-						<value>0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>engines/engine[1]/reverser-pos-norm</property>
-				<offset>0</offset>
-				<factor>200</factor>
-				<min>0</min>
-				<max>200</max>
-			</volume>
-		</engine>
-		<!-- Engine 3 sound -->
-		<engine>
-			<name>Engine 3 sound 1 external</name>
-			<path>Sounds/turbojet_fan.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
-					<greater-than>
-						<property>engines/engine[2]/rpm</property>
-						<value>0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>engines/engine[2]/rpm</property>
-				<offset>50</offset>
-				<factor>0.02</factor>
-				<min>0</min>
-				<max>100</max>
-			</volume>
-			<pitch>
-				<property>engines/engine[2]/rpm</property>
-				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
-			</pitch>
-			<orientation>
-				<x>-1</x>
-				<y>0</y>
-				<z>0</z>
-				<inner-angle>75</inner-angle>
-				<outer-angle>210</outer-angle>
-				<outer-gain>0.1</outer-gain>
-			</orientation>
-		</engine>
-		<engine>
-			<name>Engine 3 sound 2 external</name>
-			<path>Sounds/turbine_loop.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
-					<greater-than>
-						<property>engines/engine[2]/rpm</property>
-						<value>0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>engines/engine[2]/rpm</property>
-				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
-			</volume>
-			<pitch>
-				<property>engines/engine[2]/rpm</property>
-				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
-			</pitch>
-			<orientation>
-				<x>-1</x>
-				<y>0</y>
-				<z>0</z>
-				<inner-angle>75</inner-angle>
-				<outer-angle>210</outer-angle>
-				<outer-gain>0.1</outer-gain>
-			</orientation>
-		</engine>
-		<engine>
-			<name>Engine 3 sound 3 external</name>
-			<path>Sounds/jet.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
-					<greater-than>
-						<property>engines/engine[2]/rpm</property>
-						<value>0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>engines/engine[2]/rpm</property>
-				<offset>50</offset>
-				<factor>0.005</factor>
-				<min>0</min>
-				<max>100</max>
-			</volume>
-			<pitch>
-				<property>engines/engine[2]/rpm</property>
-				<offset>0</offset>
-				<factor>0.01</factor>
-				<min>0</min>
-				<max>100</max>
-			</pitch>
-			<orientation>
-				<x>1</x>
-				<y>0</y>
-				<z>0</z>
-				<inner-angle>75</inner-angle>
-				<outer-angle>210</outer-angle>
-				<outer-gain>0.1</outer-gain>
-			</orientation>
-		</engine>
-		<engine>
-			<name>Engine 3 reverse thrust external</name>
-			<path>Sounds/exhaust_loop.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<not>
-						<property>sim/current-view/internal</property>
-					</not>
 					<greater-than>
 						<property>engines/engine[2]/rpm</property>
 						<value>0</value>
@@ -424,13 +273,11 @@
 					</greater-than>
 				</and>
 			</condition>
-			<volume>
-				<property>engines/engine[2]/reverser-pos-norm</property>
+			<pitch>
+				<property>engines/engine[2]/rpm</property>
 				<offset>0</offset>
-				<factor>200</factor>
-				<min>0</min>
-				<max>200</max>
-			</volume>
+				<factor>0.01</factor>
+			</pitch>
 		</engine>
 
 		<!-- Landing gear -->

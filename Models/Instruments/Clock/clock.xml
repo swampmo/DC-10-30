@@ -11,20 +11,37 @@
 		<indicated-timezone>instrumentation/clock/indicated-timezone</indicated-timezone>
 		<local-hour>instrumentation/clock/local-hour</local-hour>
 		<start-stop-action-script>
-		 if (aircraft.chronometer.running)
-		  {
-		  aircraft.chronometer.stop();
-		  }
-		 else
-		  {
-		  aircraft.chronometer.start();
-		  }
+			if (aircraft.chronometer.running)
+			{
+				aircraft.chronometer.stop();
+			}
+			else
+			{
+				aircraft.chronometer.start();
+			}
 		</start-stop-action-script>
 		<reset-action-script>
-		 aircraft.chronometer.reset();
+			aircraft.chronometer.reset();
 		</reset-action-script>
 	</params>
-
+	
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>ElapsDigits</object-name>
+		<object-name>GMTDigits</object-name>
+		<object-name>LocalDigits</object-name>
+		<object-name>Needle1</object-name>
+		<object-name>Needle2GMT</object-name>
+		<object-name>Needle2Local</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+	
 	<animation>
 		<type>rotate</type>
 		<object-name>Needle1</object-name>

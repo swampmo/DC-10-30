@@ -12,7 +12,7 @@
 	<!-- Not actually used, just for reference -->
 	<inhg-to-mb>33.863882</inhg-to-mb>
 
-<!--	<animation>
+	<animation>
 		<type>material</type>
 		<object-name>Face</object-name> 
 		<object-name>altdig1</object-name>
@@ -35,7 +35,7 @@
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>
-	<animation>
+	<!--animation>
 		<type>material</type>
 		<object-name>Altimeter</object-name>
 		<object-name>baroknob</object-name>
@@ -46,7 +46,7 @@
 			<blue>0.05</blue>
 			<factor-prop>controls/lighting/dome-norm</factor-prop>
 		</emission>
-	</animation>-->
+	</animation-->
 
 	<!-- Needle -->
 	<animation>

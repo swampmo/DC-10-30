@@ -163,6 +163,9 @@ var init_switches = func{
     append(lights_input,props.globals.initNode("controls/lighting/landing-light-stbd",0,"BOOL"));
     append(lights_output,props.globals.initNode("systems/electrical/outputs/landing-light-stbd",0,"DOUBLE"));
     append(lights_load,1);
+    append(lights_input,props.globals.initNode("controls/lighting/panel-lights",0,"BOOL"));
+    append(lights_output,props.globals.initNode("systems/electrical/outputs/panel-lights",0,"DOUBLE"));
+    append(lights_load,1);
     append(lights_input,props.globals.initNode("controls/lighting/nav-lights",0,"BOOL"));
     append(lights_output,props.globals.initNode("systems/electrical/outputs/nav-lights",0,"DOUBLE"));
     append(lights_load,1);
@@ -191,6 +194,12 @@ var init_switches = func{
     append(lights_output,props.globals.initNode("systems/electrical/outputs/strobe[1]",0,"DOUBLE"));
     append(lights_load,1);
 
+    append(rbus_input,AVswitch);
+    append(rbus_output,props.globals.initNode("systems/electrical/outputs/autopilot[0]",0,"DOUBLE"));
+    append(rbus_load,1);
+    append(rbus_input,AVswitch);
+    append(rbus_output,props.globals.initNode("systems/electrical/outputs/autopilot[1]",0,"DOUBLE"));
+    append(rbus_load,1);
     append(rbus_input,props.globals.initNode("controls/electric/wiper-switch",0,"BOOL"));
     append(rbus_output,props.globals.initNode("systems/electrical/outputs/wiper",0,"DOUBLE"));
     append(rbus_load,1);

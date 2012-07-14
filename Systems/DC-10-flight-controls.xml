@@ -5,6 +5,104 @@
 
 <PropertyList>
 
+	<!-- Aileron controls -->
+	<filter>
+		<name>Autopilot aileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<property>autopilot/internal[0]/autoflight-engaged</property>
+						<property>autopilot/internal[1]/autoflight-engaged</property>
+					</or>
+					<not>
+						<property>autopilot/autoland/align-phase</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/flare-phase</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/rollout-phase</property>
+					</not>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<prod>
+							<property>fcs/autopilot[0]/aileron-cmd-norm</property>
+							<property>autopilot/internal[0]/autoflight-engaged</property>
+						</prod>
+						<prod>
+							<property>fcs/autopilot[1]/aileron-cmd-norm</property>
+							<property>autopilot/internal[1]/autoflight-engaged</property>
+						</prod>
+					</sum>
+					<sum>
+						<property>autopilot/internal[0]/autoflight-engaged</property>
+						<property>autopilot/internal[1]/autoflight-engaged</property>
+					</sum>
+				</div>
+			</expression>
+		</input>
+		<output>fcs/aileron-inner-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Autoland aileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<or>
+					<property>autopilot/autoland/align-phase</property>
+					<property>autopilot/autoland/flare-phase</property>
+					<property>autopilot/autoland/rollout-phase</property>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/autoland/aileron-cmd-norm</property>
+		</input>
+		<output>fcs/aileron-inner-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Manual aileron controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal[0]/autoflight-engaged</property>
+					</not>
+					<not>
+						<property>autopilot/internal[1]/autoflight-engaged</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/align-phase</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/flare-phase</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/rollout-phase</property>
+					</not>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/aileron</property>
+		</input>
+		<output>fcs/aileron-inner-cmd-norm</output>
+	</filter>
+
 	<!-- Outboard ailerons -->
 	<!-- The outboard aileron mechanism unlocks if either slats or flaps are extended -->
 	<logic>
@@ -48,7 +146,7 @@
 		<input>
 			<value>0</value>
 		</input>
-		<output>controls/flight/aileron-outer</output>
+		<output>fcs/aileron-outer-cmd-norm</output>
 	</filter>
 	<filter>
 		<name>Outboard aileron trim locker</name>
@@ -74,9 +172,9 @@
 			<property>controls/flight/outboard-ailerons</property>
 		</enable>
 		<input>
-			<property>controls/flight/aileron</property>
+			<property>fcs/aileron-inner-cmd-norm</property>
 		</input>
-		<output>controls/flight/aileron-outer</output>
+		<output>fcs/aileron-outer-cmd-norm</output>
 	</filter>
 	<filter>
 		<name>Outboard aileron trim driver</name>
@@ -90,6 +188,356 @@
 			<property>controls/flight/aileron-trim</property>
 		</input>
 		<output>controls/flight/aileron-outer-trim</output>
+	</filter>
+
+	<!-- Elevator trim -->
+	<filter>
+		<name>Autopilot elevator trim controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<or>
+					<property>autopilot/internal[0]/autoflight-engaged</property>
+					<property>autopilot/internal[1]/autoflight-engaged</property>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<prod>
+							<property>fcs/autopilot[0]/elevator-cmd-norm</property>
+							<property>autopilot/internal[0]/autoflight-engaged</property>
+						</prod>
+						<prod>
+							<property>fcs/autopilot[1]/elevator-cmd-norm</property>
+							<property>autopilot/internal[1]/autoflight-engaged</property>
+						</prod>
+					</sum>
+					<sum>
+						<property>autopilot/internal[0]/autoflight-engaged</property>
+						<property>autopilot/internal[1]/autoflight-engaged</property>
+					</sum>
+				</div>
+			</expression>
+		</input>
+		<output>controls/flight/elevator-trim</output>
+	</filter>
+
+	<!-- Rudder -->
+	<filter>
+		<name>Autoland rudder controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<or>
+					<property>autopilot/autoland/align-phase</property>
+					<property>autopilot/autoland/flare-phase</property>
+					<property>autopilot/autoland/rollout-phase</property>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>fcs/autoland/rudder-cmd-norm</property>
+		</input>
+		<output>fcs/rudder-cmd-norm</output>
+	</filter>
+	<filter>
+		<name>Manual rudder controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/autoland/align-phase</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/flare-phase</property>
+					</not>
+					<not>
+						<property>autopilot/autoland/rollout-phase</property>
+					</not>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/flight/rudder</property>
+		</input>
+		<output>fcs/rudder-cmd-norm</output>
+	</filter>
+
+	<!-- Throttles/thrust modes -->
+	<!-- Autothrottle -->
+	<filter>
+		<name>Autothrottle controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<equals>
+						<property>controls/engines/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<or>
+						<property>autopilot/internal[0]/autothrottle-engaged</property>
+						<property>autopilot/internal[1]/autothrottle-engaged</property>
+					</or>
+					<not>
+						<property>autopilot/autoland/flare-phase</property>
+					</not>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<prod>
+							<property>fcs/autopilot[0]/throttle-cmd-norm</property>
+							<property>autopilot/internal[0]/autothrottle-engaged</property>
+						</prod>
+						<prod>
+							<property>fcs/autopilot[1]/throttle-cmd-norm</property>
+							<property>autopilot/internal[1]/autothrottle-engaged</property>
+						</prod>
+					</sum>
+					<sum>
+						<property>autopilot/internal[0]/autothrottle-engaged</property>
+						<property>autopilot/internal[1]/autothrottle-engaged</property>
+					</sum>
+				</div>
+			</expression>
+		</input>
+		<output>
+			<property>fcs/throttle-cmd-norm[0]</property>
+			<property>fcs/throttle-cmd-norm[1]</property>
+			<property>fcs/throttle-cmd-norm[2]</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Autoland retard controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<or>
+					<property>autopilot/autoland/align-phase</property>
+					<property>autopilot/autoland/flare-phase</property>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<value>0</value>
+		</input>
+		<output>
+			<property>controls/engines/engine[0]/throttle</property>
+			<property>controls/engines/engine[1]/throttle</property>
+			<property>controls/engines/engine[2]/throttle</property>
+			<property>fcs/throttle-cmd-norm[0]</property>
+			<property>fcs/throttle-cmd-norm[1]</property>
+			<property>fcs/throttle-cmd-norm[2]</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Engine 1 manual throttle controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<equals>
+						<property>controls/engines/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<and>
+						<not>
+							<property>autopilot/internal[0]/autothrottle-engaged</property>
+						</not>
+						<not>
+							<property>autopilot/internal[1]/autothrottle-engaged</property>
+						</not>
+						<not>
+							<property>autopilot/autoland/flare-phase</property>
+						</not>
+					</and>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/engines/engine[0]/throttle</property>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+	<filter>
+		<name>Engine 2 manual throttle controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<equals>
+						<property>controls/engines/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<and>
+						<not>
+							<property>autopilot/internal[0]/autothrottle-engaged</property>
+						</not>
+						<not>
+							<property>autopilot/internal[1]/autothrottle-engaged</property>
+						</not>
+						<not>
+							<property>autopilot/autoland/flare-phase</property>
+						</not>
+					</and>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/engines/engine[1]/throttle</property>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+	<filter>
+		<name>Engine 3 manual throttle controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<equals>
+						<property>controls/engines/thrust-mode</property>
+						<value>0</value>
+					</equals>
+					<and>
+						<not>
+							<property>autopilot/internal[0]/autothrottle-engaged</property>
+						</not>
+						<not>
+							<property>autopilot/internal[1]/autothrottle-engaged</property>
+						</not>
+						<not>
+							<property>autopilot/autoland/flare-phase</property>
+						</not>
+					</and>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>controls/engines/engine[2]/throttle</property>
+		</input>
+		<output>fcs/throttle-cmd-norm[2]</output>
+	</filter>
+	<!-- 0 : Manual control -->
+	<!-- Interpolates the user's throttles between 0% and 94.4% -->
+	<filter>
+		<name>Engine 1 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal[0]/autothrottle-engaged</property>
+					</not>
+					<not>
+						<property>autopilot/internal[1]/autothrottle-engaged</property>
+					</not>
+					<equals>
+						<property>controls/engines/engine[0]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>controls/engines/engine[0]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.944</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[0]</output>
+	</filter>
+	<filter>
+		<name>Engine 2 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal[0]/autothrottle-engaged</property>
+					</not>
+					<not>
+						<property>autopilot/internal[1]/autothrottle-engaged</property>
+					</not>
+					<equals>
+						<property>controls/engines/engine[0]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>controls/engines/engine[0]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.944</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[1]</output>
+	</filter>
+	<filter>
+		<name>Engine 3 manual controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<and>
+					<not>
+						<property>autopilot/internal[0]/autothrottle-engaged</property>
+					</not>
+					<not>
+						<property>autopilot/internal[1]/autothrottle-engaged</property>
+					</not>
+					<equals>
+						<property>controls/engines/engine[2]/thrust-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<table>
+					<property>controls/engines/engine[2]/throttle</property>
+					<entry><ind>0</ind><dep>0</dep></entry>
+					<entry><ind>1</ind><dep>0.944</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>fcs/throttle-cmd-norm[2]</output>
 	</filter>
 
 	<!-- Spoilers -->
@@ -115,7 +563,7 @@
 		<input>
 			<expression>
 				<table>
-					<property>controls/flight/aileron</property>
+					<property>fcs/aileron-inner-cmd-norm</property>
 					<entry><ind>-1</ind><dep>1</dep></entry>
 					<entry><ind>0</ind><dep>0</dep></entry>
 					<entry><ind>1</ind><dep>0</dep></entry>
@@ -146,7 +594,7 @@
 		<input>
 			<expression>
 				<table>
-					<property>controls/flight/aileron</property>
+					<property>fcs/aileron-inner-cmd-norm</property>
 					<entry><ind>-1</ind><dep>0</dep></entry>
 					<entry><ind>0</ind><dep>1</dep></entry>
 					<entry><ind>1</ind><dep>1</dep></entry>
@@ -177,7 +625,7 @@
 		<input>
 			<expression>
 				<table>
-					<property>controls/flight/aileron</property>
+					<property>fcs/aileron-inner-cmd-norm</property>
 					<entry><ind>-1</ind><dep>0</dep></entry>
 					<entry><ind>0</ind><dep>0</dep></entry>
 					<entry><ind>1</ind><dep>1</dep></entry>
@@ -208,7 +656,7 @@
 		<input>
 			<expression>
 				<table>
-					<property>controls/flight/aileron</property>
+					<property>fcs/aileron-inner-cmd-norm</property>
 					<entry><ind>-1</ind><dep>1</dep></entry>
 					<entry><ind>0</ind><dep>1</dep></entry>
 					<entry><ind>1</ind><dep>0</dep></entry>

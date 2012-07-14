@@ -72,5 +72,11 @@
 		<inherits-from>Aircraft/DC-10-30/Models/Effects/DC10reflect</inherits-from>
 		<object-name>Nacelle</object-name>
 	</effect>
+	<effect>
+		<name>Intake reflect</name>
+		<inherits-from>Aircraft/DC-10-30/Models/Effects/DC10chrome_reflect</inherits-from>
+		<object-name>Intake</object-name>
+		<object-name>Nozzle</object-name>
+	</effect>
 
 </PropertyList>

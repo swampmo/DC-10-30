@@ -10,6 +10,21 @@
 	</params>
 
 	<animation>
+		<type>material</type>
+		<object-name>Cylinder</object-name>
+		<object-name>Needle100</object-name>
+		<object-name>Needle1000</object-name>
+		<object-name>Needle10000</object-name>
+		<object-name>inhg</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
 		<type>rotate</type>
 		<object-name>Needle100</object-name>
 		<property alias="../../params/indicated-altitude-ft" />

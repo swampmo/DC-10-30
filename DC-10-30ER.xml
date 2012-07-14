@@ -51,7 +51,7 @@
 		<slat start="0.22" end="0.66" aoa="3.0" drag="1.1" />
 		<spoiler start="0.06" end="0.62" lift="0.0" drag="1.6" />
 		<control-input axis="/controls/flight/flaps" control="FLAP0" />
-		<control-input axis="/controls/flight/aileron" control="FLAP1" split="true" />
+		<control-input axis="/fcs/aileron-inner-cmd-norm" control="FLAP1" split="true" />
 		<control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true" />
 		<control-input axis="/controls/flight/slats" control="SLAT" />
 		<control-input axis="controls/flight/spoilers-ground-cmd-norm" control="SPOILER" />
@@ -73,7 +73,7 @@
 		<slat start="0.0" end="0.85" aoa="3.0" drag="1.1" />
 		<spoiler start="0.03" end="0.45" lift="0.0" drag="1.6" />
 		<control-input axis="/controls/flight/flaps" control="FLAP0" />
-		<control-input axis="/controls/flight/aileron-outer" control="FLAP1" split="true" />
+		<control-input axis="/fcs/aileron-outer-cmd-norm" control="FLAP1" split="true" />
 		<control-input axis="/controls/flight/aileron-outer-trim" control="FLAP1" split="true" />
 		<control-input axis="/controls/flight/slats" control="SLAT" />
 		<control-input axis="/controls/flight/speedbrakes-cmd-norm" control="SPOILER" />
@@ -101,7 +101,7 @@
 	<vstab x="-17.8" y="0.0" z="7.68" length="12.0" chord="8.0" taper="0.4" sweep="35.0" idrag="1.5">
 		<stall aoa="15" width="2" peak="1.5" />
 		<flap0 start="0.37" end="1.0" lift="1.5" drag="1.3" />
-		<control-input axis="/controls/flight/rudder" control="FLAP0" invert="true" />
+		<control-input axis="/fcs/rudder-cmd-norm" control="FLAP0" invert="true" />
 		<control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true" />
 		<control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1" />
 		<control-speed control="FLAP0" transition-time="1.5" />

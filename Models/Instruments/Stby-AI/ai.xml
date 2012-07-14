@@ -8,7 +8,19 @@
 		<indicated-pitch-deg>instrumentation/attitude-indicator/indicated-pitch-deg</indicated-pitch-deg>
 		<indicated-roll-deg>instrumentation/attitude-indicator/indicated-roll-deg</indicated-roll-deg>
 	</params>
-
+	
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Ball</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+	
 	<animation>
 		<type>rotate</type>
 		<object-name>Ball</object-name>
