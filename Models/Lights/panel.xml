@@ -24,7 +24,6 @@
 		<type>light</type>
 		<light-type>point</light-type>
 		<object-name>Cone</object-name>
-		<nopreview/>
 		<position>
 			<x>0</x>
 			<y>0</y>

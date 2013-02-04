@@ -24,7 +24,6 @@
 		<type>light</type>
 		<light-type>spot</light-type>
 		<object-name>Cone</object-name>
-		<nopreview/>
 		<position>
 			<x>0</x>
 			<y>0</y>
@@ -60,8 +59,8 @@
 		</attenuation>
 		<exponent>30.0</exponent>
 		<near-m>15</near-m>
-		<far-m>180</far-m>
-		<cutoff>120</cutoff>
+		<far-m>1500</far-m>
+		<cutoff>2000</cutoff>
 	</animation>
 	
 </PropertyList>
