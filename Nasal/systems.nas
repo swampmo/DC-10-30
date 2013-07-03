@@ -298,6 +298,30 @@ setlistener("autopilot/autoland/align-phase", func(v)
 		props.globals.getNode("controls/autoflight/autothrottle-engage[1]").setBoolValue(0);
 	}
 }, 0, 0);
+# autobrake setting announce function
+var announce_autobrake = func
+{
+	var node = props.globals.getNode ("/controls/gear/ABS-select", 1);
+	var val = node.getValue ();
+	var message = "Automatic brakes: ";
+	if (val == 0)
+	{
+		message ~= "Disarmed.";
+	}
+	elsif (val == 1)
+	{
+		message ~= "Set to MIN.";
+	}
+	elsif (val == 2)
+	{
+		message ~= "Set to MED.";
+	}
+	elsif (val == 3)
+	{
+		message ~= "Set to maximum brake pressure.";
+	}
+	setprop ("/sim/messages/copilot", message);
+};
 
 ## Instrumentation
 # Spool up the instruments every 5 seconds
