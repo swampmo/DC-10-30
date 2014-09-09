@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>alt.ac</path>
+
+	<params>
+		<indicated-altitude-ft>instrumentation/altimeter/indicated-altitude-ft</indicated-altitude-ft>
+		<setting-inhg>instrumentation/altimeter/setting-inhg</setting-inhg>
+	</params>
+
+	<!-- Not actually used, just for reference -->
+	<inhg-to-mb>33.863882</inhg-to-mb>
+
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name> 
+		<object-name>altdig1</object-name>
+		<object-name>altdig2</object-name>
+		<object-name>altdig20s</object-name>
+		<object-name>altdig3</object-name>
+		<object-name>inhg1</object-name>
+		<object-name>inhg2</object-name>
+		<object-name>inhg3</object-name>
+		<object-name>inhg4</object-name>
+		<object-name>mb1</object-name>
+		<object-name>mb2</object-name>
+		<object-name>mb3</object-name>
+		<object-name>mb4</object-name>
+		<object-name>needle</object-name>
+		<emission>
+			<red>0.7</red>
+			<green>0.7</green>
+			<blue>0.7</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+	<!--animation>
+		<type>material</type>
+		<object-name>Altimeter</object-name>
+		<object-name>baroknob</object-name>
+		<object-name>bugknob</object-name>
+		<emission>
+			<red>0.07</red>
+			<green>0.06</green>
+			<blue>0.05</blue>
+			<factor-prop>controls/lighting/dome-norm</factor-prop>
+		</emission>
+	</animation-->
+
+	<!-- Needle -->
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.36</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Altimeter digits -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>altdig1</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<scroll>20</scroll>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>altdig2</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<scroll>50</scroll>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>altdig3</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.001</factor>
+		<step>100</step>
+		<scroll>20</scroll>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>altdig20s</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.01</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<!-- INHG digits -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg4</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>10</factor>
+		<step>0.01</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg3</object-name>
+		<property alias="../../params/setting-inhg" />
+		<step>0.1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg2</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg1</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<!-- MB digits -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb4</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>3.3863882</factor>
+		<step>0.0295329983</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb3</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.33863882</factor>
+		<step>0.295329983</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb2</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.033863882</factor>
+		<step>2.95329983</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb1</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.0033863882</factor>
+		<step>29.5329983</step> 
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Barometer pressure knob -->
+	<animation>
+		<type>pick</type>
+		<object-name>baroknob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../../params/setting-inhg" />
+				<step>0.01</step>
+				<max>35</max>
+			</binding>	
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../../params/setting-inhg" />
+				<step>-0.01</step>
+				<min>25</min>
+			</binding>		
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>baroknob</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>1600</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.02992</y-m>
+			<z-m>-0.02884</z-m>
+		</center>
+	</animation>
+
+</PropertyList>

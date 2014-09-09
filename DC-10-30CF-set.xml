@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Aircraft property settings specific to the DC-10-30CF -->
+
+<PropertyList include="DC-10-main.xml">
+
+	<sim>
+		<description>McDonnell Douglas DC-10-30CF</description>
+		<flight-model>yasim</flight-model>
+		<aero>DC-10-30</aero>
+
+		<model>
+			<path>Aircraft/DC-10-30/Models/DC-10-30CF.xml</path>
+			<configuration type="string">pax</configuration>
+			<livery>
+				<file>Blank</file>
+				<configuration type="string" />
+				<enable-configuration-switch type="bool">true</enable-configuration-switch>
+			</livery>
+		</model>
+
+		<weight n="1">
+			<name>Cargo</name>
+		</weight>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>McDonnell Douglas DC-10-30CF</label>
+					<item n="7">
+						<enabled type="bool">true</enabled>
+						<label>Switch between PAX/cargo configuration</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 DC10.switch_configuration();
+							</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+
+</PropertyList>

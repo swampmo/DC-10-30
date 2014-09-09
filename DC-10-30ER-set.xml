@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Aircraft property settings specific to the DC-10-30ER -->
+
+<PropertyList include="DC-10-main.xml">
+
+	<sim>
+		<description>McDonnell Douglas DC-10-30ER</description>
+		<flight-model>yasim</flight-model>
+		<aero>DC-10-30ER</aero>
+
+		<model>
+			<path>Aircraft/DC-10-30/Models/DC-10-30.xml</path>
+			<livery>
+				<file>Blank</file>
+			</livery>
+		</model>
+
+		<weight n="1">
+			<name>Passengers/Baggage</name>
+		</weight>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>McDonnell Douglas DC-10-30ER</label>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+
+</PropertyList>
