@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Aircraft property settings specific to the KC-10A -->
+
+<PropertyList include="DC-10-main.xml">
+
+    <sim>
+        <description>McDonnell Douglas KC-10A (tanker)</description>
+        <flight-model>yasim</flight-model>
+        <aero>DC-10-30</aero>
+
+        <model>
+            <path>Aircraft/DC-10-30/Models/KC-10A.xml</path>
+            <livery>
+                <file>Blank-tanker</file>
+            </livery>
+        </model>
+
+        <weight n="1">
+            <name>Fuel</name>
+        </weight>
+
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>McDonnell Douglas KC-10A</label>
+		    <item n="100">
+			<label>Extend/retract tanker boom</label>
+			<binding>
+			    <command>nasal</command>
+			    <script>
+				DC10.doors.boom.toggle();
+			    </script>
+			</binding>
+		    </item>
+                </menu>
+            </default>
+        </menubar>
+
+        <multiplay>
+            <refuel>
+                <type>boom</type>
+            </refuel>
+        </multiplay>
+    </sim>
+
+    <instrumentation>
+        <!-- Radar for air-to-air refueling capability (required for receiving fuel only) -->
+        <radar>
+            <range type="int" archive="y">20</range>
+            <minimized type="bool" archive="y">false</minimized>
+        </radar>
+    </instrumentation>
+
+    <systems>
+        <refuel>
+            <type>boom</type>
+            <serviceable type="bool">true</serviceable>
+        </refuel>
+    </systems>
+
+    <input>
+        <keyboard>
+            <key n="6">
+                <name>Ctrl-F</name>
+                <desc>Extend/retract tanker boom</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        DC10.doors.boom.toggle();
+                    </script>
+                </binding>
+            </key>
+        </keyboard>
+    </input>
+
+    <tanker type="bool">false</tanker>
+
+    <nasal>
+        <aar>
+            <file>Aircraft/Generic/aar.nas</file>
+        </aar>
+    </nasal>
+
+</PropertyList>

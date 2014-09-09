@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>clock.ac</path>
+
+	<params>
+		<elapsed-sec>instrumentation/chronometer/elapsed-sec</elapsed-sec>
+		<indicated-hour>instrumentation/clock/indicated-hour</indicated-hour>
+		<indicated-min>instrumentation/clock/indicated-min</indicated-min>
+		<indicated-timezone>instrumentation/clock/indicated-timezone</indicated-timezone>
+		<local-hour>instrumentation/clock/local-hour</local-hour>
+		<start-stop-action-script>
+			if (aircraft.chronometer.running)
+			{
+				aircraft.chronometer.stop();
+			}
+			else
+			{
+				aircraft.chronometer.start();
+			}
+		</start-stop-action-script>
+		<reset-action-script>
+			aircraft.chronometer.reset();
+		</reset-action-script>
+	</params>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>ElapsDigits</object-name>
+		<object-name>GMTDigits</object-name>
+		<object-name>LocalDigits</object-name>
+		<object-name>Needle1</object-name>
+		<object-name>Needle2GMT</object-name>
+		<object-name>Needle2Local</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle1</object-name>
+		<property alias="../../params/indicated-min" />
+		<factor>6</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle2GMT</object-name>
+		<property alias="../../params/indicated-hour" />
+		<factor>30</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Needle2GMT</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/indicated-timezone" />
+				<value>gmt</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle2Local</object-name>
+		<property alias="../../params/local-hour" />
+		<factor>30</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Needle2Local</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/indicated-timezone" />
+				<value>local</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>GMT1</object-name>
+		<property alias="../../params/indicated-hour" />
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>GMT2</object-name>
+		<property alias="../../params/indicated-hour" />
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>GMT3</object-name>
+		<property alias="../../params/indicated-min" />
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>GMT4</object-name>
+		<property alias="../../params/indicated-min" />
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>GMT1</object-name>
+		<object-name>GMT2</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/indicated-timezone" />
+				<value>gmt</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Local1</object-name>
+		<object-name>Local2</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params/indicated-timezone" />
+				<value>local</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Local1</object-name>
+		<property alias="../../params/local-hour" />
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Local2</object-name>
+		<property alias="../../params/local-hour" />
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Elaps1</object-name>
+		<property alias="../../params/elapsed-sec" />
+		<factor>0.000002778</factor>
+		<step>36000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Elaps2</object-name>
+		<property alias="../../params/elapsed-sec" />
+		<factor>0.000027778</factor>
+		<step>3600</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Elaps3</object-name>
+		<object-name>Elaps5</object-name>
+		<property alias="../../params/elapsed-sec" />
+		<factor>0.000277778</factor>
+		<step>600</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Elaps4</object-name>
+		<object-name>Elaps6</object-name>
+		<property alias="../../params/elapsed-sec" />
+		<factor>0.001666667</factor>
+		<step>60</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Elaps7</object-name>
+		<property alias="../../params/elapsed-sec" />
+		<factor>0.016666667</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Elaps8</object-name>
+		<property alias="../../params/elapsed-sec" />
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Elaps1</object-name>
+		<object-name>Elaps2</object-name>
+		<object-name>Elaps3</object-name>
+		<object-name>Elaps4</object-name>
+		<condition>
+			<greater-than-equals>
+				<property alias="../../../../params/elapsed-sec" />
+				<value>3600</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Elaps5</object-name>
+		<object-name>Elaps6</object-name>
+		<object-name>Elaps7</object-name>
+		<object-name>Elaps8</object-name>
+		<condition>
+			<less-than>
+				<property alias="../../../../params/elapsed-sec" />
+				<value>3600</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>GMTKnob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property alias="../../../../params/indicated-timezone" />
+				<value>gmt</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>LocalKnob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property alias="../../../../params/indicated-timezone" />
+				<value>local</value>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>ElapsKnob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script alias="../../../../params/start-stop-action-script" />
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script alias="../../../../params/reset-action-script" />
+			</binding>
+		</action>
+	</animation>
+
+</PropertyList>

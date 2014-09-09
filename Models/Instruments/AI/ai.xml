@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Attitude indicator instrument -->
+
+<PropertyList>
+
+	<path>ai.ac</path>
+
+	<params>
+		<indicated-pitch-deg>instrumentation/attitude-indicator/indicated-pitch-deg</indicated-pitch-deg>
+		<indicated-roll-deg>instrumentation/attitude-indicator/indicated-roll-deg</indicated-roll-deg>
+		<indicated-slip-skid>instrumentation/slip-skid-ball/indicated-slip-skid</indicated-slip-skid>
+	</params>
+
+	<animation>
+		<name>Lighting</name>
+		<type>material</type>
+		<object-name>Ball</object-name>
+		<object-name>Horizon</object-name>
+		<object-name>Roll</object-name>
+		<object-name>RollPointer</object-name>
+		<object-name>Sky</object-name>
+		<object-name>SlipBall</object-name>
+		<object-name>SlipTrack</object-name>
+		<!--condition>
+			<greater-than>
+				<property>systems/electrical/outputs/instrument-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition-->
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.273</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<name>Pitch</name>
+		<type>rotate</type>
+		<object-name>Ball</object-name>
+		<property alias="../../params/indicated-pitch-deg" />
+		<factor>2.7</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.052</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.004</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Roll</name>
+		<type>rotate</type>
+		<object-name>Ball</object-name>
+		<object-name>RollPointer</object-name>
+		<property alias="../../params/indicated-roll-deg" />
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.004</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Slip</name>
+		<type>rotate</type>
+		<object-name>SlipBall</object-name>
+		<property alias="../../params/indicated-slip-skid" />
+		<interpolation>
+			<entry><ind>-1</ind><dep>-13.7</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>13.7</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.037</z-m>
+		</center>
+	</animation>
+
+</PropertyList>
