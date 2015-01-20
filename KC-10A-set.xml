@@ -11,7 +11,7 @@
         <aero>DC-10-30</aero>
 
         <model>
-            <path>Aircraft/DC-10-30/Models/KC-10A.xml</path>
+            <path>Models/KC-10A.xml</path>
             <livery>
                 <file>Blank-tanker</file>
             </livery>

@@ -9,7 +9,7 @@
         <!-- Engine 1 sound -->
         <engine>
             <name>Engine 1 sound 1 external</name>
-            <path>Aircraft/DC-10-30/Sounds/whine.wav</path>
+            <path>Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -43,7 +43,7 @@
         </engine>
         <engine>
             <name>Engine 1 sound 2 external</name>
-            <path>Aircraft/DC-10-30/Sounds/jet.wav</path>
+            <path>Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -100,7 +100,7 @@
         <!-- Engine 2 sound -->
         <engine>
             <name>Engine 2 sound 1 external</name>
-            <path>Aircraft/DC-10-30/Sounds/whine.wav</path>
+            <path>Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -134,7 +134,7 @@
         </engine>
         <engine>
             <name>Engine 2 sound 2 external</name>
-            <path>Aircraft/DC-10-30/Sounds/jet.wav</path>
+            <path>Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -191,7 +191,7 @@
         <!-- Engine 3 sound -->
         <engine>
             <name>Engine 3 sound 1 external</name>
-            <path>Aircraft/DC-10-30/Sounds/whine.wav</path>
+            <path>Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -225,7 +225,7 @@
         </engine>
         <engine>
             <name>Engine 2 sound 3 external</name>
-            <path>Aircraft/DC-10-30/Sounds/jet.wav</path>
+            <path>Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
