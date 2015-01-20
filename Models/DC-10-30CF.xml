@@ -7,7 +7,7 @@
 
 	<model>
 		<name>Fuselage</name>
-		<path>Aircraft/DC-10-30/Models/DC-10-30CF-fuselage.xml</path>
+		<path>Models/DC-10-30CF-fuselage.xml</path>
 	</model>
 
 	<foo include="DC-10-main.xml" omit-node="y" />
