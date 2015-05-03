@@ -7,12 +7,12 @@
 
 	<model>
 		<name>Fuselage</name>
-		<path>Models/KC-10-fuselage.xml</path>
+		<path>Aircraft/DC-10-30/Models/KC-10-fuselage.xml</path>
 	</model>
 
 	<model>
 		<name>Boom</name>
-		<path>Models/KC-10-boom.xml</path>
+		<path>Aircraft/DC-10-30/Models/KC-10-boom.xml</path>
 	</model>
 
 	<foo include="DC-10-main.xml" omit-node="y" />

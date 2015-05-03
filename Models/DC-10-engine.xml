@@ -15,7 +15,7 @@
 
 	<model>
 		<name>Engine</name>
-		<path>Models/GE-CF6-50.xml</path>
+		<path>Aircraft/DC-10-30/Models/GE-CF6-50.xml</path>
 		<overlay>
 			<params>
 				<on-fire alias="../../../../params/on-fire" />
@@ -31,7 +31,7 @@
 
 	<model>
 		<name>Contrail</name>
-		<path>Models/Effects/contrail.xml</path>
+		<path>Aircraft/DC-10-30/Models/Effects/contrail.xml</path>
 		<overlay>
 			<params>
 				<n1 alias="../../../../params/n1" />

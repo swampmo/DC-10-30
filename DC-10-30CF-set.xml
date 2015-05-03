@@ -11,7 +11,7 @@
 		<aero>DC-10-30</aero>
 
 		<model>
-			<path>Models/DC-10-30CF.xml</path>
+			<path>Aircraft/DC-10-30/Models/DC-10-30CF.xml</path>
 			<configuration type="string">pax</configuration>
 			<livery>
 				<file>Blank</file>
