@@ -40,11 +40,11 @@
 	</model>
 
 	<instrumentation>
-	    <path>Systems/DC-10-instrumentation.xml</path>
+	    <path>Aircraft/DC-10-30/Systems/DC-10-instrumentation.xml</path>
 	</instrumentation>
 
 	<sound>
-	    <path>Sounds/DC-10-external-sound.xml</path>
+	    <path>Aircraft/DC-10-30/Sounds/DC-10-external-sound.xml</path>
 	</sound>
 
 	<systems>
@@ -54,23 +54,23 @@
 	    </electrical>
 	    <autopilot>
 		<name>Autopilot system</name>
-		<path>Systems/DC-10-autopilot.xml</path>
+		<path>Aircraft/DC-10-30/Systems/DC-10-autopilot.xml</path>
 	    </autopilot>
 	    <autopilot>
 		<name>Autoland</name>
-		<path>Systems/DC-10-autoland.xml</path>
+		<path>Aircraft/DC-10-30/Systems/DC-10-autoland.xml</path>
 	    </autopilot>
 	    <autopilot>
 		<name>Automatic braking system</name>
-		<path>Systems/DC-10-autobrakes.xml</path>
+		<path>Aircraft/DC-10-30/Systems/DC-10-autobrakes.xml</path>
 	    </autopilot>
 	    <autopilot>
 		<name>Flight controls</name>
-		<path>Systems/DC-10-flight-controls.xml</path>
+		<path>Aircraft/DC-10-30/Systems/DC-10-flight-controls.xml</path>
 	    </autopilot>
 	    <autopilot>
 		<name>Pushback</name>
-		<path>Systems/pushback.xml</path>
+		<path>Aircraft/DC-10-30/Systems/pushback.xml</path>
 	    </autopilot>
 	</systems>
 
