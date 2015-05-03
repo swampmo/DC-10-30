@@ -15,7 +15,7 @@
 
 	<!-- Pilot-side instruments -->
 	<model>
-		<path>Models/Instruments/Clock/clock.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Clock/clock.xml</path>
 		<overlay>
 			<params>
 				<elapsed-sec>instrumentation/clock[0]/elapsed-sec</elapsed-sec>
@@ -46,7 +46,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/ASI/asi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/ASI/asi.xml</path>
 		<overlay>
 			<params>
 				<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
@@ -60,7 +60,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/DME/dme.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/DME/dme.xml</path>
 		<offsets>
 			<x-m>-3.051</x-m>
 			<y-m>-0.632</y-m>
@@ -69,7 +69,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/NAV/nav.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/NAV/nav.xml</path>
 		<overlay>
 			<params>
 				<indicated-heading-deg>instrumentation/heading-indicator/heading-magnetic-deg</indicated-heading-deg>
@@ -85,7 +85,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/AI/ai.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/AI/ai.xml</path>
 		<overlay>
 			<params>
 				<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
@@ -101,7 +101,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/HSI/hsi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/HSI/hsi.xml</path>
 		<overlay>
 			<params>
 				<dme>
@@ -132,7 +132,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Radio-Alt/radio-alt.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Radio-Alt/radio-alt.xml</path>
 		<overlay>
 			<params>
 				<radar-altitude-ft>instrumentation/radar-altimeter[0]/radar-altitude-ft</radar-altitude-ft>
@@ -146,7 +146,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/VSI/vsi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/VSI/vsi.xml</path>
 		<overlay>
 			<params>
 				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[0]/indicated-speed-fpm</indicated-speed-fpm>
@@ -160,7 +160,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Alt/alt.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Alt/alt.xml</path>
 		<overlay>
 			<params>
 				<indicated-altitude-ft>instrumentation/altimeter[0]/indicated-altitude-ft</indicated-altitude-ft>
@@ -175,7 +175,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Fuel/fuel.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Fuel/fuel.xml</path>
 		<offsets>
 			<x-m>-3.048</x-m>
 			<y-m>-0.321</y-m>
@@ -186,7 +186,7 @@
 
 	<!-- Shared instruments -->
 	<model>
-		<path>Models/Instruments/MCP/mcp.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/MCP/mcp.xml</path>
 		<offsets>
 			<x-m>-3.035</x-m>
 			<y-m>0</y-m>
@@ -195,7 +195,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Stby-AI/ai.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Stby-AI/ai.xml</path>
 		<overlay>
 			<params>
 				<indicated-pitch-deg>instrumentation/attitude-indicator[1]/indicated-pitch-deg</indicated-pitch-deg>
@@ -210,7 +210,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Stby-Alt/alt.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Stby-Alt/alt.xml</path>
 		<overlay>
 			<params>
 				<indicated-altitude-ft>instrumentation/altimeter[1]/indicated-altitude-ft</indicated-altitude-ft>
@@ -225,7 +225,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Stby-ASI/asi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Stby-ASI/asi.xml</path>
 		<overlay>
 			<params>
 				<indicated-speed-kt>instrumentation/airspeed-indicator[1]/indicated-speed-kt</indicated-speed-kt>
@@ -239,7 +239,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/TAS-SAT/tas-sat.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/TAS-SAT/tas-sat.xml</path>
 		<offsets>
 			<x-m>-3.063</x-m>
 			<y-m>-0.13</y-m>
@@ -248,7 +248,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Engines/engines.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Engines/engines.xml</path>
 		<offsets>
 			<x-m>-3.044</x-m>
 			<y-m>0</y-m>
@@ -259,7 +259,7 @@
 
 	<!-- Copilot-side instruments -->
 	<model>
-		<path>Models/Instruments/Clock/clock.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Clock/clock.xml</path>
 		<overlay>
 			<params>
 				<elapsed-sec>instrumentation/clock[1]/elapsed-sec</elapsed-sec>
@@ -290,7 +290,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/ASI/asi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/ASI/asi.xml</path>
 		<overlay>
 			<params>
 				<indicated-speed-kt>instrumentation/airspeed-indicator[2]/indicated-speed-kt</indicated-speed-kt>
@@ -304,7 +304,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/DME/dme.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/DME/dme.xml</path>
 		<offsets>
 			<x-m>-3.051</x-m>
 			<y-m>0.353</y-m>
@@ -313,7 +313,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/NAV/nav.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/NAV/nav.xml</path>
 		<overlay>
 			<params>
 				<indicated-heading-deg>instrumentation/heading-indicator/heading-magnetic-deg</indicated-heading-deg>
@@ -329,7 +329,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/AI/ai.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/AI/ai.xml</path>
 		<overlay>
 			<params>
 				<indicated-pitch-deg>instrumentation/attitude-indicator[2]/indicated-pitch-deg</indicated-pitch-deg>
@@ -345,7 +345,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/HSI/hsi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/HSI/hsi.xml</path>
 		<overlay>
 			<params>
 				<dme>
@@ -390,7 +390,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/VSI/vsi.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/VSI/vsi.xml</path>
 		<overlay>
 			<params>
 				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[1]/indicated-speed-fpm</indicated-speed-fpm>
@@ -404,7 +404,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Models/Instruments/Alt/alt.xml</path>
+		<path>Aircraft/DC-10-30/Models/Instruments/Alt/alt.xml</path>
 		<overlay>
 			<params>
 				<indicated-altitude-ft>instrumentation/altimeter[2]/indicated-altitude-ft</indicated-altitude-ft>
@@ -422,7 +422,7 @@
 	<!-- Panel lights -->
 	<model>
 		<name>Left panel light</name>
-		<path>Models/Lights/panel.xml</path>
+		<path>Aircraft/DC-10-30/Models/Lights/panel.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/panel-lights</source>
@@ -437,7 +437,7 @@
 	</model>
 	<model>
 		<name>Center panel light</name>
-		<path>Models/Lights/panel.xml</path>
+		<path>Aircraft/DC-10-30/Models/Lights/panel.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/panel-lights</source>
@@ -452,7 +452,7 @@
 	</model>
 	<model>
 		<name>Right panel light</name>
-		<path>Models/Lights/panel.xml</path>
+		<path>Aircraft/DC-10-30/Models/Lights/panel.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/panel-lights</source>
