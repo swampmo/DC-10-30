@@ -9,7 +9,8 @@
         <description>McDonnell Douglas KC-10A (tanker)</description>
         <flight-model>yasim</flight-model>
         <aero>DC-10-30</aero>
-
+        <variant-of>DC-10-30</variant-of>
+        
         <model>
             <path>Aircraft/DC-10-30/Models/KC-10A.xml</path>
             <livery>
