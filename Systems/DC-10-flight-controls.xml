@@ -190,9 +190,9 @@
 	<output>controls/flight/aileron-outer-trim</output>
     </filter>
 
-    <!-- Elevator -->
+    <!-- Elevator trim -->
     <filter>
-	<name>Autopilot elevator controller</name>
+	<name>Autopilot elevator trim controller</name>
 	<type>gain</type>
 	<debug type="bool">false</debug>
 	<gain>1</gain>
@@ -224,7 +224,7 @@
 		</div>
 	    </expression>
 	</input>
-	<output>controls/flight/elevator</output>
+	<output>controls/flight/elevator-trim</output>
     </filter>
 
     <!-- Rudder -->
