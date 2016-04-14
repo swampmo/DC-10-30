@@ -14,7 +14,11 @@
             <cockpit type="int">3</cockpit>
             <model type="int">4</model>
         </rating>
-
+	<startup>
+      <splash-texture>Aircraft/DC-10-30/Splash/splash1.png</splash-texture>
+	  <splash-texture>Aircraft/DC-10-30/Splash/splash2.png</splash-texture>
+	  <splash-texture>Aircraft/DC-10-30/Splash/splash3.png</splash-texture>
+    </startup>
 	<model>
 	    <door>
 		<position-x-m type="float">-22.647</position-x-m>
