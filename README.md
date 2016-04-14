@@ -24,7 +24,7 @@ Special thanks to:
 * Thomas Ito-Haigh ("Armchair Ace") for the Northwest Airlines livery, the Japan Air Systems livery, the Canadien International livery, and the engine fandisk texture.
 * The (many) authors of the KC-135E for making air-to-air refueling possible in FlightGear, and for the tanker boom model which was heavily adapted for the KC-10A.
 * The awesome folks at Global Virtual Air (formerly Atlas Virtual Airlines) for supporting me  during this project!
-
+* Many others for several amazing liveries!
 ## What's inside?
 
 * DC-10-30
