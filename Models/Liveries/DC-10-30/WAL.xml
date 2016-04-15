@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>Western Airlines</name>
+				<texture>Liveries/DC-10-30/WAL.png</texture>
+				<registration>N914WA</registration>
+				<has-center-gear type="bool">false</has-center-gear>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>
