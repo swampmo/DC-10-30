@@ -25,21 +25,21 @@
             <volume>
                 <property>engines/engine[0]/rpm</property>
                 <offset>0</offset>
-                <factor>0.0075</factor>
+                <factor>0.0010</factor>
             </volume>
             <pitch>
                 <property>engines/engine[0]/rpm</property>
-                <offset>0</offset>
-                <factor>0.02</factor>
+                <offset>0.1</offset>
+                <factor>0.01</factor>
             </pitch>
-            <!--orientation>
+
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </orientation-->
+
         </engine>
         <engine>
             <name>Engine 1 sound 2 external</name>
@@ -57,24 +57,22 @@
                 </and>
             </condition>
             <volume>
-                <property>engines/engine[0]/rpm</property>
-                <offset>0</offset>
-                <factor>0.05</factor>
-            </volume>
-            <pitch>
-                <property>engines/engine[0]/rpm</property>
-                <offset>0</offset>
-                <factor>0.01</factor>
-            </pitch>
-            <!--orientation>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.010</factor>
+              <max>.65</max>
+           </volume>
+           <pitch>
+             <property>/engines/engine[1]/n1</property>
+             <factor>0.01</factor>
+             <offset>0.1</offset>
+           </pitch>
                 <x>1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </orientation-->
-        </engine>
+            </engine>
         <engine>
             <name>Engine 1 reverse thrust</name>
             <path>Sounds/exhaust_loop.wav</path>
@@ -114,23 +112,23 @@
                 </and>
             </condition>
             <volume>
-                <property>engines/engine[1]/rpm</property>
-                <offset>0</offset>
-                <factor>0.0075</factor>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.030</factor>
+              <max>1.0</max>
             </volume>
             <pitch>
-                <property>engines/engine[1]/rpm</property>
-                <offset>0</offset>
-                <factor>0.02</factor>
-            </pitch>
-            <!--orientation>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.1</factor>
+              <offset>0.01</offset>
+           </pitch>
+            
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </orientation-->
+           
         </engine>
         <engine>
             <name>Engine 2 sound 2 external</name>
@@ -148,23 +146,23 @@
                 </and>
             </condition>
             <volume>
-                <property>engines/engine[1]/rpm</property>
-                <offset>0</offset>
-                <factor>0.05</factor>
-            </volume>
-            <pitch>
-                <property>engines/engine[1]/rpm</property>
-                <offset>0</offset>
-                <factor>0.01</factor>
-            </pitch>
-            <!--orientation>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.010</factor>
+              <max>.65</max>
+           </volume>
+           <pitch>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.01</factor>
+              <offset>0.01</offset>
+           </pitch>
+            
                 <x>1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </orientation-->
+            
         </engine>
         <engine>
             <name>Engine 2 reverse thrust</name>
@@ -206,22 +204,22 @@
             </condition>
             <volume>
                 <property>engines/engine[2]/rpm</property>
-                <offset>0</offset>
+                <offset>8</offset>
                 <factor>0.0075</factor>
             </volume>
             <pitch>
                 <property>engines/engine[2]/rpm</property>
-                <offset>0</offset>
-                <factor>0.02</factor>
+                <offset>0.1</offset>
+                <factor>0.01</factor>
             </pitch>
-            <!--orientation>
+            
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </orientation-->
+            
         </engine>
         <engine>
             <name>Engine 2 sound 3 external</name>
@@ -239,23 +237,23 @@
                 </and>
             </condition>
             <volume>
-                <property>engines/engine[2]/rpm</property>
-                <offset>0</offset>
-                <factor>0.05</factor>
-            </volume>
-            <pitch>
-                <property>engines/engine[2]/rpm</property>
-                <offset>0</offset>
-                <factor>0.01</factor>
-            </pitch>
-            <!--orientation>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.010</factor>
+              <max>0.65</max>
+           </volume>
+           <pitch>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.01</factor>
+              <offset>0.02</offset>
+           </pitch>
+            
                 <x>1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </orientation-->
+            
         </engine>
         <engine>
             <name>Engine 3 reverse thrust</name>
@@ -275,7 +273,7 @@
             </condition>
             <pitch>
                 <property>engines/engine[2]/rpm</property>
-                <offset>0</offset>
+                <offset>0.1</offset>
                 <factor>0.01</factor>
             </pitch>
         </engine>

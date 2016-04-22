@@ -6,7 +6,10 @@
 <PropertyList include="DC-10-main.xml">
 
     <sim>
-        <description>McDonnell Douglas KC-10A (tanker)</description>
+       
+          
+
+      <description>McDonnell Douglas KC-10A (tanker)</description>
         <flight-model>yasim</flight-model>
         <aero>DC-10-30</aero>
         <variant-of>DC-10-30</variant-of>
@@ -38,18 +41,45 @@
                 </menu>
             </default>
         </menubar>
-
-        <multiplay>
+       
+		<multiplay>
             <refuel>
                 <type>boom</type>
             </refuel>
         </multiplay>
-    </sim>
+        
+<flight-recorder>
+<replay-config type="int">0</replay-config>
+<config n="0">
+<signals include="/Aircraft/Generic/flightrecorder/components/environment.xml"/>
+<signals include="/Aircraft/Generic/flightrecorder/components/position.xml"/>
+<signals include="/Aircraft/Generic/flightrecorder/components/controls.xml"/>
+<signals include="/Aircraft/Generic/flightrecorder/components/surfaces.xml"/>
+<signals include="/Aircraft/Generic/flightrecorder/components/engine-jet.xml">
+<count type="int">3</count>
+</signals>
+<signals include="/Aircraft/Generic/flightrecorder/components/faults-engines.xml">
+<count type="int">3</count>
+</signals>
+<signals include="/Aircraft/Generic/flightrecorder/components/tanks.xml">
+<count type="int">6</count>
+</signals>
+<signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
+<count type="int">5</count>
+</signals>
+<name type="string">KC-10</name>
+</config>
+</flight-recorder>
+
+
+      	
+    
+   </sim>
 
     <instrumentation>
         <!-- Radar for air-to-air refueling capability (required for receiving fuel only) -->
         <radar>
-            <range type="int" archive="y">20</range>
+            <range type="int" archive="y">200</range>
             <minimized type="bool" archive="y">false</minimized>
         </radar>
     </instrumentation>
