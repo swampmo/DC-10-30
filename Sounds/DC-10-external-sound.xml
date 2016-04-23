@@ -25,12 +25,12 @@
             <volume>
                 <property>engines/engine[0]/rpm</property>
                 <offset>0</offset>
-                <factor>0.0010</factor>
+                <factor>0.0085</factor>
             </volume>
             <pitch>
                 <property>engines/engine[0]/rpm</property>
-                <offset>0.1</offset>
-                <factor>0.01</factor>
+                <offset>0.0</offset>
+                <factor>0.02</factor>
             </pitch>
 
                 <x>-1</x>
@@ -73,6 +73,40 @@
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
             </engine>
+        
+          <engine>
+            <name>Engine 1 sound 3 external</name>
+            <path>Sounds/fan.wav</path>
+            <mode>looped</mode>
+            <condition>
+                <and>
+                    <not>
+                        <property>sim/current-view/internal</property>
+                    </not>
+                    <greater-than>
+                        <property>engines/engine[0]/rpm</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.010</factor>
+              <max>.40</max>
+           </volume>
+           <pitch>
+             <property>/engines/engine[1]/n1</property>
+             <factor>0.03</factor>
+             <offset>0.1</offset>
+           </pitch>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+                <inner-angle>75</inner-angle>
+                <outer-angle>210</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </engine>
+
         <engine>
             <name>Engine 1 reverse thrust</name>
             <path>Sounds/exhaust_loop.wav</path>
@@ -113,13 +147,13 @@
             </condition>
             <volume>
               <property>/engines/engine[1]/n1</property>
-              <factor>0.030</factor>
+              <factor>0.085</factor>
               <max>1.0</max>
             </volume>
             <pitch>
               <property>/engines/engine[1]/n1</property>
-              <factor>0.1</factor>
-              <offset>0.01</offset>
+              <factor>0.0</factor>
+              <offset>0.02</offset>
            </pitch>
             
                 <x>-1</x>
@@ -152,7 +186,7 @@
            </volume>
            <pitch>
               <property>/engines/engine[1]/n1</property>
-              <factor>0.01</factor>
+              <factor>0.00</factor>
               <offset>0.01</offset>
            </pitch>
             
@@ -162,6 +196,40 @@
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
+
+          <engine>
+            <name>Engine 2 sound 3 external</name>
+            <path>Sounds/fan.wav</path>
+            <mode>looped</mode>
+            <condition>
+                <and>
+                    <not>
+                        <property>sim/current-view/internal</property>
+                    </not>
+                    <greater-than>
+                        <property>engines/engine[0]/rpm</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.010</factor>
+              <max>.40</max>
+           </volume>
+           <pitch>
+             <property>/engines/engine[1]/n1</property>
+             <factor>0.03</factor>
+             <offset>0.1</offset>
+           </pitch>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+                <inner-angle>75</inner-angle>
+                <outer-angle>210</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </engine>
+
             
         </engine>
         <engine>
@@ -209,8 +277,8 @@
             </volume>
             <pitch>
                 <property>engines/engine[2]/rpm</property>
-                <offset>0.1</offset>
-                <factor>0.01</factor>
+                <offset>0.0</offset>
+                <factor>0.02</factor>
             </pitch>
             
                 <x>-1</x>
@@ -222,7 +290,7 @@
             
         </engine>
         <engine>
-            <name>Engine 2 sound 3 external</name>
+            <name>Engine 3 sound 2 external</name>
             <path>Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
@@ -253,6 +321,40 @@
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
+
+          <engine>
+            <name>Engine 3 sound 3 external</name>
+            <path>Sounds/fan.wav</path>
+            <mode>looped</mode>
+            <condition>
+                <and>
+                    <not>
+                        <property>sim/current-view/internal</property>
+                    </not>
+                    <greater-than>
+                        <property>engines/engine[0]/rpm</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.010</factor>
+              <max>.44</max>
+           </volume>
+           <pitch>
+             <property>/engines/engine[1]/n1</property>
+             <factor>0.03</factor>
+             <offset>0.1</offset>
+           </pitch>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+                <inner-angle>75</inner-angle>
+                <outer-angle>210</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </engine>
+
             
         </engine>
         <engine>
