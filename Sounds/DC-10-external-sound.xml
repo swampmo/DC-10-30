@@ -23,14 +23,14 @@
                 </and>
             </condition>
             <volume>
-                <property>engines/engine[0]/rpm</property>
-                <offset>0</offset>
-                <factor>0.0085</factor>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.085</factor>
+              <max>0.85</max>
             </volume>
             <pitch>
                 <property>engines/engine[0]/rpm</property>
-                <offset>0.0</offset>
-                <factor>0.02</factor>
+                <offset>0.01</offset>
+                <factor>0.03</factor>
             </pitch>
 
                 <x>-1</x>
@@ -59,7 +59,7 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.010</factor>
-              <max>.65</max>
+              <max>0.95</max>
            </volume>
            <pitch>
              <property>/engines/engine[1]/n1</property>
@@ -92,7 +92,7 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.010</factor>
-              <max>.40</max>
+              <max>0.50</max>
            </volume>
            <pitch>
              <property>/engines/engine[1]/n1</property>
@@ -148,12 +148,12 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.085</factor>
-              <max>1.0</max>
+              <max>0.85</max>
             </volume>
             <pitch>
               <property>/engines/engine[1]/n1</property>
-              <factor>0.0</factor>
-              <offset>0.02</offset>
+              <factor>0.01</factor>
+              <offset>0.03</offset>
            </pitch>
             
                 <x>-1</x>
@@ -182,7 +182,7 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.010</factor>
-              <max>.65</max>
+              <max>.95</max>
            </volume>
            <pitch>
               <property>/engines/engine[1]/n1</property>
@@ -215,7 +215,7 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.010</factor>
-              <max>.40</max>
+              <max>0.50</max>
            </volume>
            <pitch>
              <property>/engines/engine[1]/n1</property>
@@ -265,28 +265,29 @@
                         <property>sim/current-view/internal</property>
                     </not>
                     <greater-than>
-                        <property>engines/engine[2]/rpm</property>
+                        <property>engines/engine[0]/rpm</property>
                         <value>0</value>
                     </greater-than>
                 </and>
             </condition>
             <volume>
-                <property>engines/engine[2]/rpm</property>
-                <offset>8</offset>
-                <factor>0.0075</factor>
+              <property>/engines/engine[1]/n1</property>
+              <factor>0.085</factor>
+              <max>0.80</max>
             </volume>
             <pitch>
-                <property>engines/engine[2]/rpm</property>
-                <offset>0.0</offset>
-                <factor>0.02</factor>
+                <property>engines/engine[0]/rpm</property>
+                <offset>0.01</offset>
+                <factor>0.04</factor>
             </pitch>
-            
+
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
+
             
         </engine>
         <engine>
@@ -307,7 +308,7 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.010</factor>
-              <max>0.65</max>
+              <max>0.85</max>
            </volume>
            <pitch>
               <property>/engines/engine[1]/n1</property>
