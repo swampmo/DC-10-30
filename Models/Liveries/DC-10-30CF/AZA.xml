@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>Alitalia</name>
+				<texture>Liveries/DC-10-30/AZA.png</texture>
+				<registration>I-DYNU</registration>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

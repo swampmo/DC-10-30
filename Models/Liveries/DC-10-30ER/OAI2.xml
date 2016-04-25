@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>Omni Air International (new livery)</name>
+				<texture>Liveries/DC-10-30/N531AX.png</texture>
+				<registration>N531AX</registration>
+				<has-center-gear type="bool">true</has-center-gear>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

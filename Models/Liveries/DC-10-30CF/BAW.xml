@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>British Airways (Epping Forest)</name>
+				<texture>Liveries/DC-10-30/BAW.png</texture>
+				<registration>G-DCIO</registration>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

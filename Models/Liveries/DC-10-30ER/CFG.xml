@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>Condor Flugdienst</name>
+				<texture>Liveries/DC-10-30/CFG.png</texture>
+				<registration>D-ADSO</registration>
+				<has-center-gear type="bool">false</has-center-gear>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>
