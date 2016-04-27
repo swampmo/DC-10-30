@@ -62,6 +62,10 @@
 <property type="string">surface-positions/flap-inner-pos-norm</property>
 </signal><count type="int">3</count>
 </signals>
+</signals>
+<signals include="Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
+<count type="int">6</count>
+</signals>
 <signal>
 <type>float</type>
 <property type="string">surface-positions/flap-outer-pos-norm</property>
@@ -119,10 +123,7 @@
 </signal>
 <signals include="/Aircraft/Generic/flightrecorder/components/tanks.xml">
 <count type="int">6</count>
-</signals>
-<signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
-<count type="int">5</count>
-</signals>
+
 <name type="string">KC-10</name>
 </config>
 </flight-recorder>	
