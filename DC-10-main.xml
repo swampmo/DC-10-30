@@ -747,7 +747,9 @@
 	    <file>Aircraft/DC-10-30/Nasal/doors.nas</file>
 	    <file>Aircraft/DC-10-30/Nasal/multiplayer.nas</file>
 	    <file>Aircraft/DC-10-30/Nasal/systems.nas</file>
+		<file>Aircraft/DC-10-30/Nasal/damage.nas</file>
 	</DC10>
+          
     </nasal>
 
 </PropertyList>
