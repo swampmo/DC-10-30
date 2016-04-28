@@ -414,18 +414,15 @@ var changeGuiLoad = func()
                     #item.getNode("binding").remove();
                     #item.getNode("name",1).setValue(searchname1);
                     item.getNode("binding/command").setValue("nasal");
-                    item.getNode("binding/script").setValue("fox2.loadMPList()");
                     #item.getNode("enabled",1).setBoolValue(TRUE);
                 }
                 if(name.getValue() == searchname2) {
                     item.getNode("binding/command").setValue("nasal");
                     item.getNode("binding/dialog-name").remove();
-                    item.getNode("binding/script",1).setValue("fox2.loadIFail()");
                 }
                 if(name.getValue() == searchname3) {
                     item.getNode("binding/command").setValue("nasal");
                     item.getNode("binding/dialog-name").remove();
-                    item.getNode("binding/script",1).setValue("fox2.loadSysFail()");
                 }
             }
         }
