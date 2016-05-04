@@ -33,7 +33,7 @@
 	</engine>
 	<engine>
 		<name>Engine 1 sound 2 internal</name>
-		<path>Sounds/DC-10-2.wav</path>
+		<path>Aircraft/DC-10-30/Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -77,7 +77,7 @@
 	</engine>
 	<engine>
 		<name>Engine 2 sound 2 internal</name>
-		<path>Sounds/DC-10-2.wav</path>
+		<path>Aircraft/DC-10-30/Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -121,7 +121,7 @@
 	</engine>
 	<engine>
 		<name>Engine 3 sound 2 internal</name>
-		<path>Sounds/DC-10-2.wav</path>
+		<path>Aircraft/DC-10-30/Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -138,5 +138,6 @@
 			<factor>0.005</factor>
 		</volume>
 	</engine>
+
 
 </PropertyList>
