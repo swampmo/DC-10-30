@@ -98,7 +98,7 @@
 		<z-offset-m archive="y">-25.1</z-offset-m>
 	    </config>
 	</view>
-	<chase-distance-m type="double">-80</chase-distance-m>
+	<chase-distance-m type="double">-100</chase-distance-m>
 
 	<flaps>
 	    <setting>0.00</setting>	<!-- 0 -->
@@ -257,10 +257,6 @@
                 </signal>
                 <signal>
                     <type>float</type>
-                    <property type="string">surface-positions/flap-outer-pos-norm</property>
-                </signal>
-                <signal>
-                    <type>float</type>
                     <property type="string">engines/engine/reverser-pos-norm</property>
                 </signal>
                 <signal>
@@ -270,10 +266,6 @@
                 <signal>
                     <type>float</type>
                     <property type="string">engines/engine[2]/reverser-pos-norm</property>
-                </signal>
-                <signal>
-                    <type>float</type>
-                    <property type="string">engines/engine[3]/reverser-pos-norm</property>
                 </signal>
                 <signal>
                 <type>bool</type><property type="string">controls/electric/APU-generator</property>

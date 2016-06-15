@@ -12,6 +12,7 @@
 	<animation>
 		<type>material</type>
 		<object-name>Face</object-name>
+		<object-name>Needle</object-name>		
 		<emission>
 			<red>0.5</red>
 			<green>0.5</green>
@@ -36,6 +37,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
+
 	</animation>
 
 	<animation>

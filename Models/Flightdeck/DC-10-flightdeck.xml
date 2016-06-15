@@ -1047,11 +1047,6 @@
 		</center>
 	</animation>
 	
-	<!-- Rembrandt !! -->
-	<effect>
-		<name>REMBRANDT transparency</name>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>TQMarkings</object-name>
-	</effect>
+
 
 </PropertyList>

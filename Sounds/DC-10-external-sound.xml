@@ -9,7 +9,7 @@
         <!-- Engine 1 sound -->
         <engine>
             <name>Engine 1 sound 1 external</name>
-            <path>Sounds/whine.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -25,6 +25,7 @@
             <volume>
               <property>/engines/engine/n1</property>
               <factor>0.085</factor>
+              <min>0.5</min>
               <max>1.0</max>
             </volume>
             <pitch>
@@ -32,18 +33,19 @@
                 <offset>0.01</offset>
                 <factor>0.02</factor>
             </pitch>
-
+            <orientation>
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
-                <outer-angle>210</outer-angle>
-                <outer-gain>0.1</outer-gain>
-
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.3</outer-gain>
+         </orientation>
         </engine>
+
         <engine>
             <name>Engine 1 sound 2 external</name>
-            <path>Sounds/jet.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -57,26 +59,56 @@
                 </and>
             </condition>
             <volume>
-              <property>/engines/engine/n1</property>
-              <factor>0.004</factor>
-              <max>2.0</max>
+         		<property>/engines/engine/thrust-lbs</property>
+         		<factor>0.0000074451</factor>
            </volume>
            <pitch>
              <property>/engines/engine/n1</property>
              <factor>1.0</factor>
              <offset>0.0</offset>
            </pitch>
+          <orientation>
                 <x>1</x>
                 <y>0</y>
-                <z>0</z>
+                <z>1</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
-                <outer-gain>0.1</outer-gain>
+                <outer-gain>0.5</outer-gain>
+         </orientation>
             </engine>
         
-          <engine>
+        <engine>
             <name>Engine 1 sound 3 external</name>
-            <path>Sounds/fan.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/vibe.wav</path>
+            <mode>looped</mode>
+        <condition>
+          <and>
+            <not>
+        <property>sim/current-view/internal</property>
+            </not>
+        <greater-than>
+          <property>/engines/engine/rpm</property>
+            <value>100</value>
+        </greater-than>
+            </and>
+        </condition>
+            <volume>
+         		<property>/engines/engine/rpm</property>
+         		<factor>0.003511</factor>
+           </volume>
+          <orientation>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+                <inner-angle>75</inner-angle>
+                <outer-angle>90</outer-angle>
+                <outer-gain>0.5</outer-gain>
+         </orientation>
+            </engine>
+
+          <engine>
+            <name>Engine 1 sound 4 external</name>
+            <path>Aircraft/DC-10-30/Sounds/fan.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -92,20 +124,22 @@
             <volume>
               <property>/engines/engine/n1</property>
               <factor>0.010</factor>
-              <max>0.50</max>
+              <max>0.40</max>
            </volume>
            <pitch>
              <property>/engines/engine/n1</property>
              <factor>0.03</factor>
              <offset>0.1</offset>
            </pitch>
-                <x>1</x>
+          <orientation>
+                <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </engine>
+        </orientation>
+        </engine>
 
         <engine>
             <name>Engine 1 reverse thrust</name>
@@ -129,10 +163,11 @@
                 <factor>0.01</factor>
             </pitch>
         </engine>
-        <!-- Engine 2 sound -->
+ 
+       <!-- Engine 2 sound -->
         <engine>
             <name>Engine 2 sound 1 external</name>
-            <path>Sounds/whine.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -148,6 +183,7 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.085</factor>
+              <min>0.5</min>
               <max>1.0</max>
             </volume>
             <pitch>
@@ -155,18 +191,19 @@
               <factor>0.01</factor>
               <offset>0.02</offset>
            </pitch>
-            
+          <orientation>  
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
-                <outer-angle>210</outer-angle>
-                <outer-gain>0.1</outer-gain>
-           
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.3</outer-gain>
+        </orientation>           
         </engine>
+        
         <engine>
             <name>Engine 2 sound 2 external</name>
-            <path>Sounds/jet.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -180,26 +217,57 @@
                 </and>
             </condition>
             <volume>
-              <property>/engines/engine[1]/n1</property>
-              <factor>0.004</factor>
-              <max>2.0</max>
+         		<property>/engines/engine[1]/thrust-lbs</property>
+         		<factor>0.0000074451</factor>
            </volume>
            <pitch>
               <property>/engines/engine[1]/n1</property>
               <factor>1.0</factor>
-              <offset>0.00</offset>
+              <offset>0.0</offset>
            </pitch>
-            
+          <orientation>  
                 <x>1</x>
                 <y>0</y>
-                <z>0</z>
+                <z>1</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
-                <outer-gain>0.1</outer-gain>
+                <outer-gain>0.5</outer-gain>
+        </orientation>
+        </engine>
+        
+        <engine>
+            <name>Engine 2 sound 3 external</name>
+            <path>Aircraft/DC-10-30/Sounds/vibe.wav</path>
+            <mode>looped</mode>
+        <condition>
+          <and>
+            <not>
+        <property>sim/current-view/internal</property>
+            </not>
+          <greater-than>
+        <property>/engines/engine[1]/rpm</property>
+            <value>100</value>
+          </greater-than>
+            </and>
+        </condition>
+            <volume>
+         		<property>/engines/engine[1]/rpm</property>
+         		<factor>0.003511</factor>
+           </volume>
+          <orientation>  
+                <x>0</x>
+                <y>-1</y>
+                <y>1</y>
+                <z>0</z>
+                <inner-angle>75</inner-angle>
+                <outer-angle>90</outer-angle>
+                <outer-gain>0.5</outer-gain>
+        </orientation>
+        </engine>
 
           <engine>
-            <name>Engine 2 sound 3 external</name>
-            <path>Sounds/fan.wav</path>
+            <name>Engine 2 sound 4 external</name>
+            <path>Aircraft/DC-10-30/Sounds/fan.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -215,23 +283,24 @@
             <volume>
               <property>/engines/engine[1]/n1</property>
               <factor>0.010</factor>
-              <max>0.50</max>
+              <max>0.40</max>
            </volume>
            <pitch>
              <property>/engines/engine[1]/n1</property>
              <factor>0.03</factor>
              <offset>0.1</offset>
            </pitch>
-                <x>1</x>
+          <orientation>
+                <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
-            </engine>
+        </orientation>>
+        </engine>
 
             
-        </engine>
         <engine>
             <name>Engine 2 reverse thrust</name>
             <path>Sounds/exhaust_loop.wav</path>
@@ -254,10 +323,11 @@
                 <factor>0.01</factor>
             </pitch>
         </engine>
+
         <!-- Engine 3 sound -->
         <engine>
             <name>Engine 3 sound 1 external</name>
-            <path>Sounds/whine.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -273,26 +343,27 @@
             <volume>
               <property>/engines/engine[2]/n1</property>
               <factor>0.085</factor>
-              <max>0.95</max>
+              <min>0.5</min>
+              <max>1.0</max>
             </volume>
             <pitch>
                 <property>engines/engine[2]/rpm</property>
                 <offset>0.01</offset>
                 <factor>0.02</factor>
             </pitch>
-
+            <orientation>
                 <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
-                <outer-angle>210</outer-angle>
-                <outer-gain>0.1</outer-gain>
-
-            
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.3</outer-gain>
+           </orientation>
         </engine>
+ 
         <engine>
             <name>Engine 3 sound 2 external</name>
-            <path>Sounds/jet.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -306,26 +377,56 @@
                 </and>
             </condition>
             <volume>
-              <property>/engines/engine[2]/n1</property>
-              <factor>0.004</factor>
-              <max>1.75</max>
+         		<property>/engines/engine[2]/thrust-lbs</property>
+         		<factor>0.0000074451</factor>
            </volume>
            <pitch>
               <property>/engines/engine[2]/n1</property>
               <factor>1.0</factor>
-              <offset>0.00</offset>
+              <offset>0.0</offset>
            </pitch>
-            
+          <orientation>            
                 <x>1</x>
                 <y>0</y>
-                <z>0</z>
+                <z>1</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
-                <outer-gain>0.1</outer-gain>
-
-          <engine>
+                <outer-gain>0.5</outer-gain>
+         </orientation>
+         </engine>
+         
+        <engine>
             <name>Engine 3 sound 3 external</name>
-            <path>Sounds/fan.wav</path>
+            <path>Aircraft/DC-10-30/Sounds/vibe.wav</path>
+            <mode>looped</mode>
+        <condition>
+          <and>
+            <not>
+        <property>sim/current-view/internal</property>
+            </not>
+          <greater-than>
+        <property>/engines/engine[2]/rpm</property>
+            <value>100</value>
+          </greater-than>
+            </and>
+        </condition>
+            <volume>
+         		<property>/engines/engine[2]/rpm</property>
+         		<factor>0.003511</factor>
+           </volume>
+          <orientation>  
+                <x>0</x>
+                <y>-1</y>
+                <z>0</z>
+                <inner-angle>75</inner-angle>
+                <outer-angle>90</outer-angle>
+                <outer-gain>0.5</outer-gain>
+        </orientation>
+        </engine>
+          
+          <engine>
+            <name>Engine 3 sound 4 external</name>
+            <path>Aircraft/DC-10-30/Sounds/fan.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -341,24 +442,25 @@
             <volume>
               <property>/engines/engine[2]/n1</property>
               <factor>0.010</factor>
-              <max>.44</max>
+              <max>.34</max>
            </volume>
            <pitch>
              <property>/engines/engine[2]/n1</property>
              <factor>0.03</factor>
              <offset>0.1</offset>
            </pitch>
-                <x>1</x>
+          <orientation>
+                <x>-1</x>
                 <y>0</y>
                 <z>0</z>
                 <inner-angle>75</inner-angle>
                 <outer-angle>210</outer-angle>
                 <outer-gain>0.1</outer-gain>
+         </orientation>
             </engine>
 
             
-        </engine>
-        <engine>
+           <engine>
             <name>Engine 3 reverse thrust</name>
             <path>Sounds/exhaust_loop.wav</path>
             <mode>looped</mode>
