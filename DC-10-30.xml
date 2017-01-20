@@ -208,9 +208,11 @@
 
     <!-- Payload information from http://www.acp-logistics.com/DC-10-charter-mcdonnell-douglas.html -->
     <!-- Crew -->
-    <weight x="25.0" y="0.0" z="5.0" mass-prop="/sim/weight[0]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="15000.0" />
+    <weight x="25.0" y="0.0" z="5.0" mass-prop="/sim/weight[0]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="600.0" />
+	<!--Passengers-->
+    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[1]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="15000.0" />
 	<!--cargo-->
-    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[1]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="170000.0" />
+    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[2]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="170000.0" />
 
 
 
