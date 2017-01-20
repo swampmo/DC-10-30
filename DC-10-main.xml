@@ -123,14 +123,16 @@
 	<weight n="0">
 	    <name>Crew</name>
 	    <weight-lb>250</weight-lb>
-	    <max-lb>600</max-lb>
+	    <max-lb>15000</max-lb>
 	    <min-lb>120</min-lb>
 	</weight>
 	<weight n="1">
-	    <weight-lb>100000</weight-lb>
-	    <max-lb>142700</max-lb>
+	    <name>Cargo</name>
+	    <weight-lb>0</weight-lb>
+	    <max-lb>170000</max-lb>
 	    <min-lb>0</min-lb>
 	</weight>
+
 
 	<menubar>
 	    <default>

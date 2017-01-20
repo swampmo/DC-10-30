@@ -22,10 +22,10 @@
         </model>
 
         <weight n="1">
-            <name>Fuel</name>
+            <name>Cargo</name>
         </weight>
 
-        <menubar>
+         <menubar>
             <default>
                 <menu n="100">
                     <label>McDonnell Douglas KC-10A</label>

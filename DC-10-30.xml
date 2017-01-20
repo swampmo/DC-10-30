@@ -199,6 +199,7 @@
     <tank x="15.0" y="0.0" z="3.5" jet="true" capacity="54654" />
     <tank x="0.0" y="0.0" z="3.5" jet="true" capacity="81944" />
 
+
     <!-- Ballast to adjust center of gravity -->
     <!-- Redistribute the mass toward the nose -->
     <ballast x="25.0" y="0.0" z="4.0" mass="30000.0" />
@@ -207,8 +208,10 @@
 
     <!-- Payload information from http://www.acp-logistics.com/DC-10-charter-mcdonnell-douglas.html -->
     <!-- Crew -->
-    <weight x="25.0" y="0.0" z="5.0" mass-prop="/sim/weight[0]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="600.0" />
-    <!-- PAX/Cargo -->
-    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[1]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="142700.0" />
+    <weight x="25.0" y="0.0" z="5.0" mass-prop="/sim/weight[0]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="15000.0" />
+	<!--cargo-->
+    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[1]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="170000.0" />
+
+
 
 </airplane>
